@@ -1,0 +1,293 @@
+/* Custom Checkbox Styles */
+.custom-checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 12px;
+    color: #222;
+}
+.custom-checkbox {
+    display: none;
+}
+
+button{
+    padding: 1px 6px 1px 6px;
+}
+.custom-checkbox-box {
+    box-sizing: border-box;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #000;
+    background: #fff;
+    border-radius: 2px;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.custom-checkbox-box svg {
+    position: absolute;
+}
+.section-count {
+    font-size: 0.92em;
+        border-right: none;
+    color: #888;
+    margin-left: 0.15em;
+}
+.selected-badge {
+    display: inline-block;
+    background: rgb(103, 179, 101);
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 12px;
+    padding: 2px 8px;
+    margin-left: 8px;
+    vertical-align: middle;
+    min-width: 1.5em;
+    text-align: center;
+}
+.selected-badge {
+    display: inline-block;
+    background: rgb(103, 179, 101);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 0.1rem 0.6rem;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+}
+.question-row {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin: 2.5rem 0 1.5rem 0;
+    font-size: 1.08rem;
+    font-weight: 500;
+}
+
+.yesno-toggle {
+    display: flex;
+    gap: 0;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1.5px solid #e0e0e0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.yesno-toggle button {
+    background: #fff;
+    border: none;
+    color: #222;
+    font-family: 'Roboto Condensed', 'Roboto', Arial, sans-serif;
+    font-weight: 500;
+    padding: 0.5rem 2.2rem;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    border-right: 1.5px solid #e0e0e0;
+    border-radius: 0;
+}
+
+.yesno-toggle button.active {
+    background: #fffbe6;
+    color: #222;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    z-index: 1;
+}
+.yesno-toggle button:hover {
+    background: #fffade;
+}
+.top-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.expand-top-btn {
+    background: #f7f7fa;
+    border: 1px solid #e0e0e0;
+    color: #555;
+    border-radius: 12px;
+    padding: 0.1rem 0.7rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    transition: background 0.2s, border 0.2s;
+}
+.expand-top-btn:hover {
+    background: #e6f7ff;
+    border-color: #1890ff;
+}
+.legend-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
+.select-all-btn, .select-all-popular-btn {
+    background: #fff;
+    color: #000000;
+    border-radius: 60px;
+    border: 1px solid #c5c5c5;
+    font-weight: 300;
+    font-size: small;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.select-all-btn.active, .select-all-popular-btn.active {
+    background: #f5f5f5;
+}
+.select-all-btn:hover, .select-all-popular-btn:hover {
+    background: #e6e6e6;
+}
+
+.group-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.top-section {
+    margin-bottom: 3.5rem;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+
+.facilities-section {
+    border: none;
+}
+.services-section {
+    border: none;
+}
+
+.top-section-title {
+    font-size: 1.7rem;
+    font-family: 'Roboto Condensed', 'Roboto', Arial, sans-serif;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #003366;
+    letter-spacing: 1px;
+}
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap');
+
+body {
+    background: #f7f7fa;
+    font-family: 'Roboto', 'Roboto Condensed', Arial, sans-serif;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+    padding: 2rem 2.5rem;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: #2a2a2a;
+}
+
+
+.group-fieldset {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    border: 1px solid #eaeaea;
+    margin-bottom: 24px;
+}
+
+
+.group-legend-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    color: #3a3a3a;
+    padding: 0 8px;
+}
+
+.show-more-icon-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.group-title {
+    font-size: 1rem;
+    color: #4a4a4a;
+    margin-bottom: 0.5rem;
+}
+
+.options-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 0.25rem;
+}
+
+.option-item {
+    min-width: 180px;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+.option-item input[type='checkbox']:checked + span {
+    color: #003366;
+    font-weight: 500;
+    height: 12px;
+    width:12px
+}
+
+.most-used {
+    background: #fffbe6;
+        background: #fffbe6;
+    min-width: 180px;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.show-more-btn {
+    background: #f0f0f0;
+    border: none;
+    color: #2a2a2a;
+    padding: 0.4rem 1.2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    transition: background 0.2s;
+}
+
+.show-more-btn:hover {
+    background: #e0e0e0;
+}
+
+label {
+    cursor: pointer;
+    font-size: 0.8rem;
+    color: #222;
+}
+
+input[type="checkbox"] {
+    margin-right: 0.7em;
+    accent-color: #000;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 4px;
+}
