@@ -1,0 +1,1819 @@
+{
+    "Ground facilities0/46": [
+        {
+            "id": "3",
+            "name": "Air conditioning",
+            "popular": true
+        },
+        {
+            "id": "50160",
+            "name": "Beach access",
+            "popular": true
+        },
+        {
+            "id": "20007",
+            "name": "Children's play area",
+            "popular": true
+        },
+        {
+            "id": "56",
+            "name": "Indoor pool",
+            "popular": true
+        },
+        {
+            "id": "57",
+            "name": "Outdoor pool",
+            "popular": true
+        },
+        {
+            "id": "68",
+            "name": "Ski in, ski out",
+            "popular": true
+        },
+        {
+            "id": "7",
+            "name": "BBQ/Picnic area",
+            "popular": false
+        },
+        {
+            "id": "50162",
+            "name": "Boat slip",
+            "popular": false
+        },
+        {
+            "id": "103",
+            "name": "CCTV in common areas",
+            "popular": false
+        },
+        {
+            "id": "104",
+            "name": "CCTV outside property",
+            "popular": false
+        },
+        {
+            "id": "20010",
+            "name": "Child pool",
+            "popular": false
+        },
+        {
+            "id": "107",
+            "name": "Dangerous animals on property",
+            "popular": false
+        },
+        {
+            "id": "63",
+            "name": "Driving range",
+            "popular": false
+        },
+        {
+            "id": "58",
+            "name": "Garden",
+            "popular": false
+        },
+        {
+            "id": "62",
+            "name": "Golf course",
+            "popular": false
+        },
+        {
+            "id": "94",
+            "name": "Heated pool",
+            "popular": false
+        },
+        {
+            "id": "208",
+            "name": "Indoor fireplace",
+            "popular": false
+        },
+        {
+            "id": "206",
+            "name": "Infinity pool",
+            "popular": false
+        },
+        {
+            "id": "214",
+            "name": "Nightclub",
+            "popular": false
+        },
+        {
+            "id": "210",
+            "name": "Outdoor dining area",
+            "popular": false
+        },
+        {
+            "id": "99",
+            "name": "Outdoor fireplace or fire pit",
+            "popular": false
+        },
+        {
+            "id": "209",
+            "name": "Outdoor Furniture",
+            "popular": false
+        },
+        {
+            "id": "32",
+            "name": "Outdoor hot tub",
+            "popular": false
+        },
+        {
+            "id": "211",
+            "name": "Outdoor kitchen",
+            "popular": false
+        },
+        {
+            "id": "212",
+            "name": "Outdoor Shower",
+            "popular": false
+        },
+        {
+            "id": "215",
+            "name": "Patio",
+            "popular": false
+        },
+        {
+            "id": "83",
+            "name": "Pet basket",
+            "popular": false
+        },
+        {
+            "id": "105",
+            "name": "Pet(s) live on property",
+            "popular": false
+        },
+        {
+            "id": "213",
+            "name": "Pickleball",
+            "popular": false
+        },
+        {
+            "id": "204",
+            "name": "Plunge pool",
+            "popular": false
+        },
+        {
+            "id": "202",
+            "name": "Pool Cover",
+            "popular": false
+        },
+        {
+            "id": "260",
+            "name": "Pool shallow end",
+            "popular": false
+        },
+        {
+            "id": "91",
+            "name": "Private beach",
+            "popular": false
+        },
+        {
+            "id": "201",
+            "name": "Private Pool",
+            "popular": false
+        },
+        {
+            "id": "50161",
+            "name": "Resort or park access",
+            "popular": false
+        },
+        {
+            "id": "203",
+            "name": "Rooftop pool",
+            "popular": false
+        },
+        {
+            "id": "61",
+            "name": "Rooftop terrace",
+            "popular": false
+        },
+        {
+            "id": "205",
+            "name": "Salt-water pool",
+            "popular": false
+        },
+        {
+            "id": "25",
+            "name": "Stables",
+            "popular": false
+        },
+        {
+            "id": "100",
+            "name": "Sun terrace",
+            "popular": false
+        },
+        {
+            "id": "156",
+            "name": "Swimming Lake/Pond On Site",
+            "popular": false
+        },
+        {
+            "id": "263",
+            "name": "Tennis courts - Indoor",
+            "popular": false
+        },
+        {
+            "id": "262",
+            "name": "Tennis courts - Outdoor",
+            "popular": false
+        },
+        {
+            "id": "60",
+            "name": "Terrace",
+            "popular": false
+        },
+        {
+            "id": "207",
+            "name": "Water slide",
+            "popular": false
+        },
+        {
+            "id": "50159",
+            "name": "Waterfront",
+            "popular": false
+        }
+    ],
+    "Parking facilities1/15": [
+        {
+            "id": "10010",
+            "name": "Accessible parking",
+            "popular": true
+        },
+        {
+            "id": "10002",
+            "name": "Free parking",
+            "popular": true
+        },
+        {
+            "id": "10013",
+            "name": "Indoor parking",
+            "popular": true
+        },
+        {
+            "id": "10003",
+            "name": "Off-site parking",
+            "popular": true
+        },
+        {
+            "id": "10001",
+            "name": "On-site parking",
+            "popular": true
+        },
+        {
+            "id": "10008",
+            "name": "Advance reservation parking",
+            "popular": false
+        },
+        {
+            "id": "10009",
+            "name": "Electric vehicle charging",
+            "popular": false
+        },
+        {
+            "id": "10012",
+            "name": "Limited parking",
+            "popular": false
+        },
+        {
+            "id": "10006",
+            "name": "Long-term parking",
+            "popular": false
+        },
+        {
+            "id": "10007",
+            "name": "Metered parking",
+            "popular": false
+        },
+        {
+            "id": "10014",
+            "name": "Optional reservation parking",
+            "popular": false
+        },
+        {
+            "id": "10015",
+            "name": "Private parking",
+            "popular": false
+        },
+        {
+            "id": "10011",
+            "name": "Recreational vehicle parking",
+            "popular": false
+        },
+        {
+            "id": "10004",
+            "name": "Secure parking",
+            "popular": false
+        },
+        {
+            "id": "10005",
+            "name": "Valet parking",
+            "popular": false
+        }
+    ],
+    "On-premise facilities1/27": [
+        {
+            "id": "8",
+            "name": "Beauty or spa facilities",
+            "popular": true
+        },
+        {
+            "id": "102",
+            "name": "Gift/news stand",
+            "popular": true
+        },
+        {
+            "id": "53",
+            "name": "Sports & Fitness Facility",
+            "popular": true
+        },
+        {
+            "id": "219",
+            "name": "Air Hockey",
+            "popular": false
+        },
+        {
+            "id": "51",
+            "name": "Bank/ATM",
+            "popular": false
+        },
+        {
+            "id": "29",
+            "name": "Bike lock-up",
+            "popular": false
+        },
+        {
+            "id": "10",
+            "name": "Books, Videos, Games",
+            "popular": false
+        },
+        {
+            "id": "65",
+            "name": "Chapel",
+            "popular": false
+        },
+        {
+            "id": "20005",
+            "name": "Children's books, videos, games",
+            "popular": false
+        },
+        {
+            "id": "50015",
+            "name": "Dart board",
+            "popular": false
+        },
+        {
+            "id": "216",
+            "name": "Foosball table",
+            "popular": false
+        },
+        {
+            "id": "93",
+            "name": "Game room",
+            "popular": false
+        },
+        {
+            "id": "114",
+            "name": "Health club",
+            "popular": false
+        },
+        {
+            "id": "87",
+            "name": "Hypoallergenic units",
+            "popular": false
+        },
+        {
+            "id": "64",
+            "name": "Ice machine",
+            "popular": false
+        },
+        {
+            "id": "117",
+            "name": "Library",
+            "popular": false
+        },
+        {
+            "id": "97",
+            "name": "Locker room",
+            "popular": false
+        },
+        {
+            "id": "133",
+            "name": "Mattress and pillow protectors",
+            "popular": false
+        },
+        {
+            "id": "217",
+            "name": "Pool table",
+            "popular": false
+        },
+        {
+            "id": "220",
+            "name": "Pool toys",
+            "popular": false
+        },
+        {
+            "id": "24",
+            "name": "Sauna",
+            "popular": false
+        },
+        {
+            "id": "54",
+            "name": "Shop/boutique",
+            "popular": false
+        },
+        {
+            "id": "55",
+            "name": "Ski room",
+            "popular": false
+        },
+        {
+            "id": "26",
+            "name": "Steam room",
+            "popular": false
+        },
+        {
+            "id": "218",
+            "name": "Table Tennis",
+            "popular": false
+        },
+        {
+            "id": "72",
+            "name": "Vending Machine",
+            "popular": false
+        },
+        {
+            "id": "134",
+            "name": "Washable duvet covers",
+            "popular": false
+        }
+    ],
+    "Sustainability6/20": [
+        {
+            "id": "177",
+            "name": "Carbon offsetting",
+            "popular": true
+        },
+        {
+            "id": "185",
+            "name": "Eco-friendly cleaning products",
+            "popular": true
+        },
+        {
+            "id": "180",
+            "name": "No plastic bottles",
+            "popular": true
+        },
+        {
+            "id": "179",
+            "name": "No plastic cups, straws or stirrers",
+            "popular": true
+        },
+        {
+            "id": "166",
+            "name": "No plastic cutlery or tableware",
+            "popular": true
+        },
+        {
+            "id": "164",
+            "name": "No single-use toiletries",
+            "popular": true
+        },
+        {
+            "id": "178",
+            "name": "100% renewable electricity",
+            "popular": false
+        },
+        {
+            "id": "176",
+            "name": "Community reinvestment projects",
+            "popular": false
+        },
+        {
+            "id": "174",
+            "name": "Double-glazed windows",
+            "popular": false
+        },
+        {
+            "id": "171",
+            "name": "Energy-efficient bulbs",
+            "popular": false
+        },
+        {
+            "id": "175",
+            "name": "Food waste minimised",
+            "popular": false
+        },
+        {
+            "id": "181",
+            "name": "Geothermal power",
+            "popular": false
+        },
+        {
+            "id": "182",
+            "name": "Greywater recycling",
+            "popular": false
+        },
+        {
+            "id": "167",
+            "name": "Keycard for room electricity",
+            "popular": false
+        },
+        {
+            "id": "170",
+            "name": "Recycling bins",
+            "popular": false
+        },
+        {
+            "id": "169",
+            "name": "Refillable water stations",
+            "popular": false
+        },
+        {
+            "id": "183",
+            "name": "Solar power",
+            "popular": false
+        },
+        {
+            "id": "173",
+            "name": "Water-efficient shower",
+            "popular": false
+        },
+        {
+            "id": "172",
+            "name": "Water-efficient toilet",
+            "popular": false
+        },
+        {
+            "id": "184",
+            "name": "Wind power",
+            "popular": false
+        }
+    ],
+    "Bars & Restaurants0/8": [
+        {
+            "id": "6",
+            "name": "Bar",
+            "popular": true
+        },
+        {
+            "id": "69",
+            "name": "Breakfast lounge",
+            "popular": true
+        },
+        {
+            "id": "21",
+            "name": "Restaurant",
+            "popular": true
+        },
+        {
+            "id": "71",
+            "name": "Coffee shop",
+            "popular": false
+        },
+        {
+            "id": "16",
+            "name": "Lounge",
+            "popular": false
+        },
+        {
+            "id": "244",
+            "name": "Pool bar",
+            "popular": false
+        },
+        {
+            "id": "70",
+            "name": "Restaurant - starred",
+            "popular": false
+        },
+        {
+            "id": "109",
+            "name": "Snack bar",
+            "popular": false
+        }
+    ],
+    "Campsites0/6": [
+        {
+            "id": "245",
+            "name": "30 amp hookup",
+            "popular": false
+        },
+        {
+            "id": "246",
+            "name": "50 amp hookup",
+            "popular": false
+        },
+        {
+            "id": "247",
+            "name": "Full hookup",
+            "popular": false
+        },
+        {
+            "id": "248",
+            "name": "Sewage disposal points",
+            "popular": false
+        },
+        {
+            "id": "249",
+            "name": "TV Cable hookups",
+            "popular": false
+        },
+        {
+            "id": "250",
+            "name": "Water Hookup",
+            "popular": false
+        }
+    ],
+    "Equipment0/14": [
+        {
+            "id": "59",
+            "name": "Equipment rental",
+            "popular": true
+        },
+        {
+            "id": "251",
+            "name": "Sports, fitness equipment",
+            "popular": true
+        },
+        {
+            "id": "66",
+            "name": "Sun, Pool, Beach loungers",
+            "popular": true
+        },
+        {
+            "id": "67",
+            "name": "Beach/Sun umbrellas",
+            "popular": false
+        },
+        {
+            "id": "108",
+            "name": "Bicycle rental",
+            "popular": false
+        },
+        {
+            "id": "101",
+            "name": "Bicyles freely available",
+            "popular": false
+        },
+        {
+            "id": "252",
+            "name": "Boat Rental",
+            "popular": false
+        },
+        {
+            "id": "85",
+            "name": "Car rental",
+            "popular": false
+        },
+        {
+            "id": "254",
+            "name": "Golf equipment",
+            "popular": false
+        },
+        {
+            "id": "253",
+            "name": "Jeep rental",
+            "popular": false
+        },
+        {
+            "id": "89",
+            "name": "Ski equipment",
+            "popular": false
+        },
+        {
+            "id": "255",
+            "name": "Snorkelling equipment",
+            "popular": false
+        },
+        {
+            "id": "113",
+            "name": "Tennis equipment",
+            "popular": false
+        },
+        {
+            "id": "106",
+            "name": "Weapons on property",
+            "popular": false
+        }
+    ],
+    "Guest services3/18": [
+        {
+            "id": "1",
+            "name": "24h reception",
+            "popular": true
+        },
+        {
+            "id": "128",
+            "name": "Contactless check-in/out",
+            "popular": true
+        },
+        {
+            "id": "81",
+            "name": "Express check in",
+            "popular": true
+        },
+        {
+            "id": "82",
+            "name": "Express check out",
+            "popular": true
+        },
+        {
+            "id": "80",
+            "name": "24 hour security",
+            "popular": false
+        },
+        {
+            "id": "5",
+            "name": "Baggage store",
+            "popular": false
+        },
+        {
+            "id": "39",
+            "name": "Butler services",
+            "popular": false
+        },
+        {
+            "id": "40",
+            "name": "Currency exchange",
+            "popular": false
+        },
+        {
+            "id": "96",
+            "name": "Massage services",
+            "popular": false
+        },
+        {
+            "id": "44",
+            "name": "Meet & greet service",
+            "popular": false
+        },
+        {
+            "id": "48",
+            "name": "Newspaper service",
+            "popular": false
+        },
+        {
+            "id": "11",
+            "name": "On-site entertainment",
+            "popular": false
+        },
+        {
+            "id": "19",
+            "name": "Porter / concierge service",
+            "popular": false
+        },
+        {
+            "id": "20",
+            "name": "Prayer mats",
+            "popular": false
+        },
+        {
+            "id": "119",
+            "name": "Room service mobile app",
+            "popular": false
+        },
+        {
+            "id": "86",
+            "name": "Safe deposit box",
+            "popular": false
+        },
+        {
+            "id": "50",
+            "name": "Turndown service",
+            "popular": false
+        },
+        {
+            "id": "27",
+            "name": "Wakeup call service",
+            "popular": false
+        }
+    ],
+    "Children services1/13": [
+        {
+            "id": "20002",
+            "name": "Babysitting",
+            "popular": true
+        },
+        {
+            "id": "20009",
+            "name": "Childcare",
+            "popular": true
+        },
+        {
+            "id": "20008",
+            "name": "Children's club",
+            "popular": true
+        },
+        {
+            "id": "20011",
+            "name": "Baby bath",
+            "popular": false
+        },
+        {
+            "id": "20001",
+            "name": "Baby listening device",
+            "popular": false
+        },
+        {
+            "id": "20015",
+            "name": "Changing table",
+            "popular": false
+        },
+        {
+            "id": "20016",
+            "name": "Child safety gates",
+            "popular": false
+        },
+        {
+            "id": "20017",
+            "name": "Child safety socket covers",
+            "popular": false
+        },
+        {
+            "id": "20018",
+            "name": "Children tableware",
+            "popular": false
+        },
+        {
+            "id": "20006",
+            "name": "Highchairs",
+            "popular": false
+        },
+        {
+            "id": "20013",
+            "name": "Pushchairs/Strollers",
+            "popular": false
+        },
+        {
+            "id": "20019",
+            "name": "Table corner guards",
+            "popular": false
+        },
+        {
+            "id": "20014",
+            "name": "Travel cot",
+            "popular": false
+        }
+    ],
+    "Cleaning services2/9": [
+        {
+            "id": "46",
+            "name": "Cleaning service",
+            "popular": true
+        },
+        {
+            "id": "78",
+            "name": "Housekeeping - daily",
+            "popular": true
+        },
+        {
+            "id": "9",
+            "name": "Dry cleaning",
+            "popular": false
+        },
+        {
+            "id": "79",
+            "name": "Housekeeping - weekly",
+            "popular": false
+        },
+        {
+            "id": "88",
+            "name": "Ironing service",
+            "popular": false
+        },
+        {
+            "id": "50157",
+            "name": "Laundromat nearby",
+            "popular": false
+        },
+        {
+            "id": "36",
+            "name": "Laundry",
+            "popular": false
+        },
+        {
+            "id": "168",
+            "name": "Room cleaning on request",
+            "popular": false
+        },
+        {
+            "id": "165",
+            "name": "Towels changed on request",
+            "popular": false
+        }
+    ],
+    "Breakfast options1/14": [
+        {
+            "id": "40022",
+            "name": "Breakfast to-go",
+            "popular": true
+        },
+        {
+            "id": "40013",
+            "name": "Buffet breakfast",
+            "popular": true
+        },
+        {
+            "id": "40001",
+            "name": "Continental breakfast",
+            "popular": true
+        },
+        {
+            "id": "40002",
+            "name": "Cooked breakfast",
+            "popular": true
+        },
+        {
+            "id": "40006",
+            "name": "Free breakfast",
+            "popular": true
+        },
+        {
+            "id": "40007",
+            "name": "American breakfast",
+            "popular": false
+        },
+        {
+            "id": "40010",
+            "name": "Asian breakfast",
+            "popular": false
+        },
+        {
+            "id": "40014",
+            "name": "Danish basket",
+            "popular": false
+        },
+        {
+            "id": "40008",
+            "name": "English/Irish breakfast",
+            "popular": false
+        },
+        {
+            "id": "40012",
+            "name": "Farmhouse breakfast",
+            "popular": false
+        },
+        {
+            "id": "40011",
+            "name": "Healthy breakfast",
+            "popular": false
+        },
+        {
+            "id": "40009",
+            "name": "Italian breakfast",
+            "popular": false
+        },
+        {
+            "id": "40024",
+            "name": "Vegan breakfast",
+            "popular": false
+        },
+        {
+            "id": "40023",
+            "name": "Vegetarian breakfast",
+            "popular": false
+        }
+    ],
+    "Transport & Ticketing0/9": [
+        {
+            "id": "256",
+            "name": "Airport shuttle (free)",
+            "popular": false
+        },
+        {
+            "id": "257",
+            "name": "Airport shuttle (paid)",
+            "popular": false
+        },
+        {
+            "id": "4",
+            "name": "Shuttle service",
+            "popular": false
+        },
+        {
+            "id": "90",
+            "name": "Ski passes",
+            "popular": false
+        },
+        {
+            "id": "258",
+            "name": "Ski shuttle (free)",
+            "popular": false
+        },
+        {
+            "id": "259",
+            "name": "Ski shuttle (paid)",
+            "popular": false
+        },
+        {
+            "id": "45",
+            "name": "Ticketing service",
+            "popular": false
+        },
+        {
+            "id": "261",
+            "name": "Tours and Passes",
+            "popular": false
+        },
+        {
+            "id": "52",
+            "name": "Transport service",
+            "popular": false
+        }
+    ],
+    "Business services2/13": [
+        {
+            "id": "30001",
+            "name": "Business facilities",
+            "popular": true
+        },
+        {
+            "id": "13",
+            "name": "Free WiFi internet",
+            "popular": true
+        },
+        {
+            "id": "43",
+            "name": "WiFi internet",
+            "popular": true
+        },
+        {
+            "id": "30011",
+            "name": "Conference & events",
+            "popular": false
+        },
+        {
+            "id": "30004",
+            "name": "Fax machine",
+            "popular": false
+        },
+        {
+            "id": "12",
+            "name": "Free high speed internet",
+            "popular": false
+        },
+        {
+            "id": "42",
+            "name": "High speed internet",
+            "popular": false
+        },
+        {
+            "id": "30002",
+            "name": "Laptop friendly workspace",
+            "popular": false
+        },
+        {
+            "id": "30005",
+            "name": "Meeting rooms",
+            "popular": false
+        },
+        {
+            "id": "30006",
+            "name": "Photocopying",
+            "popular": false
+        },
+        {
+            "id": "49",
+            "name": "Plug adapters",
+            "popular": false
+        },
+        {
+            "id": "30007",
+            "name": "Printing",
+            "popular": false
+        },
+        {
+            "id": "28",
+            "name": "Weddings & private parties",
+            "popular": false
+        }
+    ],
+    "Meals & catering0/23": [
+        {
+            "id": "40016",
+            "name": "All-inclusive",
+            "popular": true
+        },
+        {
+            "id": "40005",
+            "name": "Breakfast",
+            "popular": true
+        },
+        {
+            "id": "20003",
+            "name": "Children's menu",
+            "popular": true
+        },
+        {
+            "id": "40015",
+            "name": "Half-board",
+            "popular": true
+        },
+        {
+            "id": "22",
+            "name": "Room service",
+            "popular": true
+        },
+        {
+            "id": "23",
+            "name": "24h room service",
+            "popular": false
+        },
+        {
+            "id": "40025",
+            "name": "All food locally sourced",
+            "popular": false
+        },
+        {
+            "id": "40026",
+            "name": "All organic food",
+            "popular": false
+        },
+        {
+            "id": "111",
+            "name": "Breakfast in the room/unit",
+            "popular": false
+        },
+        {
+            "id": "110",
+            "name": "Breakfast served in restaurant",
+            "popular": false
+        },
+        {
+            "id": "40004",
+            "name": "Dinner",
+            "popular": false
+        },
+        {
+            "id": "40019",
+            "name": "Gluten-free options",
+            "popular": false
+        },
+        {
+            "id": "112",
+            "name": "Grocery shopping",
+            "popular": false
+        },
+        {
+            "id": "40021",
+            "name": "Halal options",
+            "popular": false
+        },
+        {
+            "id": "40020",
+            "name": "Kosher options",
+            "popular": false
+        },
+        {
+            "id": "40003",
+            "name": "Lunch",
+            "popular": false
+        },
+        {
+            "id": "38",
+            "name": "Personal chef",
+            "popular": false
+        },
+        {
+            "id": "40018",
+            "name": "Vegan options",
+            "popular": false
+        },
+        {
+            "id": "40017",
+            "name": "Vegetarian options",
+            "popular": false
+        },
+        {
+            "id": "152",
+            "name": "Wrapped breakfast",
+            "popular": false
+        },
+        {
+            "id": "154",
+            "name": "Wrapped dinner",
+            "popular": false
+        },
+        {
+            "id": "153",
+            "name": "Wrapped lunch",
+            "popular": false
+        },
+        {
+            "id": "155",
+            "name": "Wrapped room service",
+            "popular": false
+        }
+    ],
+    "Hygiene Security2/29": [
+        {
+            "id": "122",
+            "name": "Disinfected between stays",
+            "popular": true
+        },
+        {
+            "id": "124",
+            "name": "Hand sanitiser",
+            "popular": true
+        },
+        {
+            "id": "120",
+            "name": "Professionally cleaned",
+            "popular": true
+        },
+        {
+            "id": "127",
+            "name": "Barriers in main areas",
+            "popular": false
+        },
+        {
+            "id": "141",
+            "name": "Common area doors left open",
+            "popular": false
+        },
+        {
+            "id": "121",
+            "name": "Disinfected daily",
+            "popular": false
+        },
+        {
+            "id": "144",
+            "name": "First aid kit",
+            "popular": false
+        },
+        {
+            "id": "136",
+            "name": "Gloves for guests",
+            "popular": false
+        },
+        {
+            "id": "137",
+            "name": "Guest protective clothing encouraged",
+            "popular": false
+        },
+        {
+            "id": "130",
+            "name": "High-touch surfaces disinfected",
+            "popular": false
+        },
+        {
+            "id": "132",
+            "name": "Linens washed above 60\u00b0C/140\u00b0F",
+            "popular": false
+        },
+        {
+            "id": "131",
+            "name": "Linens washed to local guidelines",
+            "popular": false
+        },
+        {
+            "id": "135",
+            "name": "Masks for guests",
+            "popular": false
+        },
+        {
+            "id": "140",
+            "name": "No shared stationery",
+            "popular": false
+        },
+        {
+            "id": "129",
+            "name": "No staff present",
+            "popular": false
+        },
+        {
+            "id": "142",
+            "name": "Outside air ventilation",
+            "popular": false
+        },
+        {
+            "id": "139",
+            "name": "Reduced occupancy",
+            "popular": false
+        },
+        {
+            "id": "143",
+            "name": "Request no staff entry to room",
+            "popular": false
+        },
+        {
+            "id": "123",
+            "name": "Rooms sealed after cleaning",
+            "popular": false
+        },
+        {
+            "id": "150",
+            "name": "Sanitised tableware",
+            "popular": false
+        },
+        {
+            "id": "125",
+            "name": "Social distancing",
+            "popular": false
+        },
+        {
+            "id": "148",
+            "name": "Socially distanced dining",
+            "popular": false
+        },
+        {
+            "id": "126",
+            "name": "Staff protective clothing",
+            "popular": false
+        },
+        {
+            "id": "145",
+            "name": "Staff trained in safety protocol",
+            "popular": false
+        },
+        {
+            "id": "138",
+            "name": "Staggered check-in",
+            "popular": false
+        },
+        {
+            "id": "149",
+            "name": "Staggered time slots for dining",
+            "popular": false
+        },
+        {
+            "id": "151",
+            "name": "Takeaway meals",
+            "popular": false
+        },
+        {
+            "id": "147",
+            "name": "Temperature checks (guests)",
+            "popular": false
+        },
+        {
+            "id": "146",
+            "name": "Temperature checks (staff)",
+            "popular": false
+        }
+    ],
+    "Activities and Experiences3/93": [
+        {
+            "id": "50080",
+            "name": "Adventure",
+            "popular": false
+        },
+        {
+            "id": "50001",
+            "name": "Animal watching",
+            "popular": false
+        },
+        {
+            "id": "50048",
+            "name": "Antiques & fairs",
+            "popular": false
+        },
+        {
+            "id": "50002",
+            "name": "Archery",
+            "popular": false
+        },
+        {
+            "id": "50035",
+            "name": "Art galleries & museums",
+            "popular": false
+        },
+        {
+            "id": "50082",
+            "name": "Arts & crafts",
+            "popular": false
+        },
+        {
+            "id": "50083",
+            "name": "Backpacking",
+            "popular": false
+        },
+        {
+            "id": "50003",
+            "name": "Badminton court",
+            "popular": false
+        },
+        {
+            "id": "50084",
+            "name": "Beach activities",
+            "popular": false
+        },
+        {
+            "id": "50006",
+            "name": "Billiards / pool / snooker",
+            "popular": false
+        },
+        {
+            "id": "50007",
+            "name": "Bird watching",
+            "popular": false
+        },
+        {
+            "id": "50008",
+            "name": "Boating",
+            "popular": false
+        },
+        {
+            "id": "50009",
+            "name": "Bowling alley",
+            "popular": false
+        },
+        {
+            "id": "50010",
+            "name": "Canoeing",
+            "popular": false
+        },
+        {
+            "id": "50086",
+            "name": "Casino, arcades",
+            "popular": false
+        },
+        {
+            "id": "50087",
+            "name": "Celebrity spotting",
+            "popular": false
+        },
+        {
+            "id": "50088",
+            "name": "Cinema",
+            "popular": false
+        },
+        {
+            "id": "50011",
+            "name": "Clay pigeon shooting",
+            "popular": false
+        },
+        {
+            "id": "50089",
+            "name": "Concerts, music",
+            "popular": false
+        },
+        {
+            "id": "50090",
+            "name": "Cooking",
+            "popular": false
+        },
+        {
+            "id": "50012",
+            "name": "Cricket",
+            "popular": false
+        },
+        {
+            "id": "50091",
+            "name": "Croquet",
+            "popular": false
+        },
+        {
+            "id": "50013",
+            "name": "Cycling",
+            "popular": false
+        },
+        {
+            "id": "50014",
+            "name": "Dancing",
+            "popular": false
+        },
+        {
+            "id": "50092",
+            "name": "Desert rides",
+            "popular": false
+        },
+        {
+            "id": "50016",
+            "name": "Dog racing",
+            "popular": false
+        },
+        {
+            "id": "50093",
+            "name": "Entertainment",
+            "popular": false
+        },
+        {
+            "id": "50094",
+            "name": "Exhibition",
+            "popular": false
+        },
+        {
+            "id": "50095",
+            "name": "Family fun",
+            "popular": false
+        },
+        {
+            "id": "50075",
+            "name": "Farm life",
+            "popular": false
+        },
+        {
+            "id": "50017",
+            "name": "Fine dining",
+            "popular": false
+        },
+        {
+            "id": "50018",
+            "name": "Fishing",
+            "popular": false
+        },
+        {
+            "id": "50096",
+            "name": "Fitness & sports",
+            "popular": false
+        },
+        {
+            "id": "50019",
+            "name": "Fly fishing",
+            "popular": false
+        },
+        {
+            "id": "50020",
+            "name": "Football or soccer",
+            "popular": false
+        },
+        {
+            "id": "50021",
+            "name": "Gambling",
+            "popular": false
+        },
+        {
+            "id": "50097",
+            "name": "Games, chess, cards",
+            "popular": false
+        },
+        {
+            "id": "50023",
+            "name": "Golf",
+            "popular": false
+        },
+        {
+            "id": "50024",
+            "name": "Golf - driving range",
+            "popular": false
+        },
+        {
+            "id": "50025",
+            "name": "Golf - miniature",
+            "popular": false
+        },
+        {
+            "id": "50098",
+            "name": "Group parties",
+            "popular": false
+        },
+        {
+            "id": "50120",
+            "name": "Hiking",
+            "popular": false
+        },
+        {
+            "id": "50099",
+            "name": "History/science museums",
+            "popular": false
+        },
+        {
+            "id": "50027",
+            "name": "Horse racing",
+            "popular": false
+        },
+        {
+            "id": "50028",
+            "name": "Horse riding",
+            "popular": false
+        },
+        {
+            "id": "50100",
+            "name": "Hunting",
+            "popular": false
+        },
+        {
+            "id": "50029",
+            "name": "Jet-ski",
+            "popular": false
+        },
+        {
+            "id": "50030",
+            "name": "Karaoke",
+            "popular": false
+        },
+        {
+            "id": "50031",
+            "name": "Kayaking",
+            "popular": false
+        },
+        {
+            "id": "50101",
+            "name": "Leisure park",
+            "popular": false
+        },
+        {
+            "id": "50122",
+            "name": "Local artist exhibitions and performances",
+            "popular": false
+        },
+        {
+            "id": "50121",
+            "name": "Locally-organised tours and activities",
+            "popular": false
+        },
+        {
+            "id": "50102",
+            "name": "Motorsports",
+            "popular": false
+        },
+        {
+            "id": "50033",
+            "name": "Mountain biking",
+            "popular": false
+        },
+        {
+            "id": "50103",
+            "name": "Mountain sports",
+            "popular": false
+        },
+        {
+            "id": "50104",
+            "name": "Murder mystery",
+            "popular": false
+        },
+        {
+            "id": "50037",
+            "name": "Nightlife - nightclubs",
+            "popular": false
+        },
+        {
+            "id": "50026",
+            "name": "Offsite gym",
+            "popular": false
+        },
+        {
+            "id": "50106",
+            "name": "Pampering",
+            "popular": false
+        },
+        {
+            "id": "50118",
+            "name": "Paragliding",
+            "popular": false
+        },
+        {
+            "id": "50038",
+            "name": "Parasailing",
+            "popular": false
+        },
+        {
+            "id": "50040",
+            "name": "Polo",
+            "popular": false
+        },
+        {
+            "id": "50108",
+            "name": "Pub crawl",
+            "popular": false
+        },
+        {
+            "id": "50041",
+            "name": "Racquetball court",
+            "popular": false
+        },
+        {
+            "id": "50109",
+            "name": "Re-enactment",
+            "popular": false
+        },
+        {
+            "id": "50110",
+            "name": "Retreat",
+            "popular": false
+        },
+        {
+            "id": "50043",
+            "name": "River rafting",
+            "popular": false
+        },
+        {
+            "id": "50044",
+            "name": "Rock climbing",
+            "popular": false
+        },
+        {
+            "id": "50045",
+            "name": "Sailing",
+            "popular": false
+        },
+        {
+            "id": "50046",
+            "name": "Scuba diving",
+            "popular": false
+        },
+        {
+            "id": "50047",
+            "name": "Shopping",
+            "popular": false
+        },
+        {
+            "id": "50052",
+            "name": "Skating rink",
+            "popular": false
+        },
+        {
+            "id": "50119",
+            "name": "Ski school",
+            "popular": false
+        },
+        {
+            "id": "50111",
+            "name": "Skiing - alpine",
+            "popular": false
+        },
+        {
+            "id": "50117",
+            "name": "Skiing - cross-country",
+            "popular": false
+        },
+        {
+            "id": "50053",
+            "name": "Skydiving",
+            "popular": false
+        },
+        {
+            "id": "50054",
+            "name": "Snorkelling",
+            "popular": false
+        },
+        {
+            "id": "50112",
+            "name": "Special interest",
+            "popular": false
+        },
+        {
+            "id": "50055",
+            "name": "Squash court",
+            "popular": false
+        },
+        {
+            "id": "50056",
+            "name": "Surfing",
+            "popular": false
+        },
+        {
+            "id": "50057",
+            "name": "Table tennis",
+            "popular": false
+        },
+        {
+            "id": "50113",
+            "name": "Team building",
+            "popular": false
+        },
+        {
+            "id": "50059",
+            "name": "Tennis",
+            "popular": false
+        },
+        {
+            "id": "50060",
+            "name": "Theatre, opera",
+            "popular": false
+        },
+        {
+            "id": "50114",
+            "name": "Train spotting",
+            "popular": false
+        },
+        {
+            "id": "50061",
+            "name": "Volleyball",
+            "popular": false
+        },
+        {
+            "id": "50062",
+            "name": "Walking",
+            "popular": false
+        },
+        {
+            "id": "50063",
+            "name": "Water activities",
+            "popular": false
+        },
+        {
+            "id": "50064",
+            "name": "Water-skiing",
+            "popular": false
+        },
+        {
+            "id": "50115",
+            "name": "Watersports",
+            "popular": false
+        },
+        {
+            "id": "50116",
+            "name": "Wild life",
+            "popular": false
+        },
+        {
+            "id": "50065",
+            "name": "Windsurfing",
+            "popular": false
+        },
+        {
+            "id": "50066",
+            "name": "Wine tasting",
+            "popular": false
+        }
+    ]
+}
