@@ -153,39 +153,6 @@ function Group({ title, items, checked, setChecked }) {
                                     <svg width="16" height="16" viewBox="0 0 16 16">
                                       <polyline points="4,8 7,12 12,4" style={{ fill: 'none', stroke: '#000', strokeWidth: 2 }} />
                                     </svg>
-                            </span>
-                            <span title={i.name}>{truncateLabel(i.name)}</span>
-                          </label>
-                        </div>
-                      );
-                    })}
-                  </div>
-                  {other.length > 12 && showMore && (
-                    <>
-             
-                      <div className="options-flex">
-                        {other.slice(12).map((i, oidx) => {
-                          const idx = items.findIndex(it => it.id === i.id);
-                          return (
-                            <div className="option-item" key={i.id}>
-                              <label className="custom-checkbox-label" title={i.name}>
-                                <input
-                                  type="checkbox"
-                                  className="custom-checkbox"
-                                  value={i.name}
-                                  data-id={i.id}
-                                  checked={checked[idx] || false}
-                                  onChange={e => {
-                                    const newChecked = [...checked];
-                                    newChecked[idx] = e.target.checked;
-                                    setChecked(newChecked);
-                                  }}
-                                />
-                                <span className="custom-checkbox-box">
-                                  {checked[idx] && (
-                                    <svg width="16" height="16" viewBox="0 0 16 16">
-                                      <polyline points="4,8 7,12 12,4" style={{ fill: 'none', stroke: '#000', strokeWidth: 2 }} />
-                                    </svg>
                                   )}
                                 </span>
                                 <span title={i.name}>{truncateLabel(i.name)}</span>
@@ -194,44 +161,80 @@ function Group({ title, items, checked, setChecked }) {
                           );
                         })}
                       </div>
-                    </>)}
-                </>
-              ) : (
-                <>
-                  {showMore && (
-                    <>
-                        <div style={{marginTop:8}} className="group-title">All options</div>
-                    <div className="options-flex">
-                      {other.map((i, oidx) => {
-                        const idx = items.findIndex(it => it.id === i.id);
-                        return (
-                          <div className="option-item" key={i.id}>
-                            <label className="custom-checkbox-label" title={i.name}>
-                              <input
-                                type="checkbox"
-                                className="custom-checkbox"
-                                value={i.name}
-                                data-id={i.id}
-                                checked={checked[idx] || false}
-                                onChange={e => {
-                                  const newChecked = [...checked];
-                                  newChecked[idx] = e.target.checked;
-                                  setChecked(newChecked);
-                                }}
-                              />
-                              <span className="custom-checkbox-box">
-                                {checked[idx] && (
-                                  <svg width="16" height="16" viewBox="0 0 16 16">
-                                    <polyline points="4,8 7,12 12,4" style={{ fill: 'none', stroke: '#000', strokeWidth: 2 }} />
-                                  </svg>
-                                )}
-                              </span>
-                              <span title={i.name}>{truncateLabel(i.name)}</span>
-                            </label>
+                      {other.length > 12 && showMore && (
+                        <>
+                 
+                          <div className="options-flex">
+                            {other.slice(12).map((i, oidx) => {
+                              const idx = items.findIndex(it => it.id === i.id);
+                              return (
+                                <div className="option-item" key={i.id}>
+                                  <label className="custom-checkbox-label" title={i.name}>
+                                    <input
+                                      type="checkbox"
+                                      className="custom-checkbox"
+                                      value={i.name}
+                                      data-id={i.id}
+                                      checked={checked[idx] || false}
+                                      onChange={e => {
+                                        const newChecked = [...checked];
+                                        newChecked[idx] = e.target.checked;
+                                        setChecked(newChecked);
+                                      }}
+                                    />
+                                    <span className="custom-checkbox-box">
+                                      {checked[idx] && (
+                                        <svg width="16" height="16" viewBox="0 0 16 16">
+                                          <polyline points="4,8 7,12 12,4" style={{ fill: 'none', stroke: '#000', strokeWidth: 2 }} />
+                                        </svg>
+                                      )}
+                                    </span>
+                                    <span title={i.name}>{truncateLabel(i.name)}</span>
+                                  </label>
+                                </div>
+                              );
+                            })}
                           </div>
-                        );
-                      })}
-                    </div>
+                        </>)}
+                    </>
+                  ) : (
+                    <>
+                      {showMore && (
+                        <>
+                            <div style={{marginTop:8}} className="group-title">All options</div>
+                        <div className="options-flex">
+                          {other.map((i, oidx) => {
+                            const idx = items.findIndex(it => it.id === i.id);
+                            return (
+                              <div className="option-item" key={i.id}>
+                                <label className="custom-checkbox-label" title={i.name}>
+                                  <input
+                                    type="checkbox"
+                                    className="custom-checkbox"
+                                    value={i.name}
+                                    data-id={i.id}
+                                    checked={checked[idx] || false}
+                                    onChange={e => {
+                                      const newChecked = [...checked];
+                                      newChecked[idx] = e.target.checked;
+                                      setChecked(newChecked);
+                                    }}
+                                  />
+                                  <span className="custom-checkbox-box">
+                                    {checked[idx] && (
+                                      <svg width="16" height="16" viewBox="0 0 16 16">
+                                        <polyline points="4,8 7,12 12,4" style={{ fill: 'none', stroke: '#000', strokeWidth: 2 }} />
+                                      </svg>
+                                    )}
+                                  </span>
+                                  <span title={i.name}>{truncateLabel(i.name)}</span>
+                                </label>
+                              </div>
+                            );
+                          })}
+                        </div>
+                        </>
+                      )}
                     </>
                   )}
                 </>
