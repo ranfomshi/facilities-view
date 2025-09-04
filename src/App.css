@@ -6,13 +6,15 @@
     font-size: 12px;
     color: #222;
 }
+
 .custom-checkbox {
     display: none;
 }
 
-button{
+button {
     padding: 1px 6px 1px 6px;
 }
+
 .custom-checkbox-box {
     box-sizing: border-box;
     width: 12px;
@@ -26,15 +28,18 @@ button{
     justify-content: center;
     position: relative;
 }
+
 .custom-checkbox-box svg {
     position: absolute;
 }
+
 .section-count {
-    font-size: 0.92em;
-        border-right: none;
-    color: #888;
+    font-size: 0.5em;
+    border-right: none;
+    color: #b3b3b3;
     margin-left: 0.15em;
 }
+
 .selected-badge {
     display: inline-block;
     background: rgb(103, 179, 101);
@@ -48,6 +53,7 @@ button{
     min-width: 1.5em;
     text-align: center;
 }
+
 .selected-badge {
     display: inline-block;
     background: rgb(103, 179, 101);
@@ -59,6 +65,7 @@ button{
     margin-left: 0.5rem;
     vertical-align: middle;
 }
+
 .question-row {
     display: flex;
     align-items: center;
@@ -74,8 +81,9 @@ button{
     border-radius: 4px;
     overflow: hidden;
     border: 1.5px solid #e0e0e0;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
 }
+
 .yesno-toggle button {
     background: #fff;
     border: none;
@@ -93,12 +101,14 @@ button{
 .yesno-toggle button.active {
     background: #fffbe6;
     color: #222;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
     z-index: 1;
 }
+
 .yesno-toggle button:hover {
     background: #fffade;
 }
+
 .top-section-header {
     display: flex;
     align-items: center;
@@ -116,10 +126,12 @@ button{
     margin-left: 0.5rem;
     transition: background 0.2s, border 0.2s;
 }
+
 .expand-top-btn:hover {
     background: #e6f7ff;
     border-color: #1890ff;
 }
+
 .legend-actions {
     display: flex;
     align-items: center;
@@ -127,7 +139,8 @@ button{
 }
 
 
-.select-all-btn, .select-all-popular-btn {
+.select-all-btn,
+.select-all-popular-btn {
     background: #fff;
     color: #000000;
     border-radius: 60px;
@@ -138,10 +151,14 @@ button{
     cursor: pointer;
     transition: background 0.2s;
 }
-.select-all-btn.active, .select-all-popular-btn.active {
+
+.select-all-btn.active,
+.select-all-popular-btn.active {
     background: #f5f5f5;
 }
-.select-all-btn:hover, .select-all-popular-btn:hover {
+
+.select-all-btn:hover,
+.select-all-popular-btn:hover {
     background: #e6e6e6;
 }
 
@@ -150,16 +167,18 @@ button{
     align-items: center;
     gap: 0.5rem;
 }
+
 .top-section {
     margin-bottom: 3.5rem;
-    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    padding: 1rem 1.5rem 0.5rem 1.5rem;
     border-radius: 4px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+
 }
 
 .facilities-section {
     border: none;
 }
+
 .services-section {
     border: none;
 }
@@ -171,6 +190,7 @@ button{
     margin-bottom: 2rem;
     color: rgb(33, 33, 33);
 }
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap');
 
@@ -184,7 +204,6 @@ body {
     margin: 2rem auto;
     background: #fff;
     border-radius: 4px;
-    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
     padding: 2rem 2.5rem;
 }
 
@@ -198,9 +217,10 @@ h1 {
 .group-fieldset {
     background: #fff;
     border-radius: 4px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
     border: 1px solid #eaeaea;
     margin-bottom: 24px;
+    max-width: 856px;
 }
 
 
@@ -211,6 +231,7 @@ h1 {
     font-size: 1.2rem;
     color: #3a3a3a;
     padding: 0 8px;
+    font-weight: 600;
 }
 
 .show-more-icon-btn {
@@ -236,23 +257,24 @@ h1 {
 }
 
 .option-item {
-    min-width: 180px;
+    min-width: 168px;
     font-size: 1em;
     display: flex;
     align-items: center;
     box-sizing: border-box;
 }
-.option-item input[type='checkbox']:checked + span {
+
+.option-item input[type='checkbox']:checked+span {
     color: #003366;
     font-weight: 500;
     height: 12px;
-    width:12px
+    width: 12px
 }
 
 .most-used {
     background: #fffbe6;
-        background: #fffbe6;
-    min-width: 180px;
+    background: #fffbe6;
+    min-width: 168px;
     font-size: 1em;
     display: flex;
     align-items: center;
