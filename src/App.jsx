@@ -334,7 +334,7 @@ function App() {
         <>
           <section className="top-section facilities-section">
             <div className="top-section-header">
-              <h2 className="top-section-title">FACILITIES</h2>
+              <h2 className="top-section-title">Facilities</h2>
             </div>
             {facilitiesMain.map(({ key, label }) =>
               data[key] ? (
@@ -365,7 +365,7 @@ function App() {
           </section>
           <section className="top-section services-section">
             <div className="top-section-header">
-              <h2 className="top-section-title">SERVICES</h2>
+              <h2 className="top-section-title">Services</h2>
             </div>
             {servicesMain.map(({ key, label }) =>
               data[key] ? (
