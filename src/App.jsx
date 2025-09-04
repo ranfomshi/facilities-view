@@ -52,15 +52,15 @@ function Group({ title, items, checked, setChecked }) {
           >
             Select All
           </button>
-{popular.length > 0 &&  <button
-                  type="button"
-                  className={`select-all-popular-btn${allPopularChecked ? ' active' : ''}`}
-                  onClick={handleSelectAllPopular}
-                  title={allPopularChecked ? 'Deselect all popular options' : 'Select all popular options'}
-                >
-                  Select Popular
-                </button>}
-         
+          {popular.length > 0 && <button
+            type="button"
+            className={`select-all-popular-btn${allPopularChecked ? ' active' : ''}`}
+            onClick={handleSelectAllPopular}
+            title={allPopularChecked ? 'Deselect all popular options' : 'Select all popular options'}
+          >
+            Select Popular
+          </button>}
+
           {!showAll && (
             <button
               type="button"
@@ -74,41 +74,43 @@ function Group({ title, items, checked, setChecked }) {
         </div>
       </legend>
       {showAll ? (
-        <div className="options-flex">
-          {items.map((i, idx) => (
-            <div className={i.popular ? "most-used option-item" : "option-item"} key={i.id}>
-              <label className="custom-checkbox-label" title={i.name}>
-                <input
-                  type="checkbox"
-                  className="custom-checkbox"
-                  value={i.name}
-                  data-id={i.id}
-                  checked={checked[idx] || false}
-                  onChange={e => {
-                    const newChecked = [...checked];
-                    newChecked[idx] = e.target.checked;
-                    setChecked(newChecked);
-                  }}
-                />
-                <span className="custom-checkbox-box">
-                  {checked[idx] && (
-                    <svg width="16" height="16" viewBox="0 0 16 16">
-                      <polyline points="4,8 7,12 12,4" style={{ fill: 'none', stroke: '#000', strokeWidth: 2 }} />
-                    </svg>
-                  )}
-                </span>
-                <span title={i.name}>{truncateLabel(i.name)}</span>
-              </label>
-            </div>
-          ))}
-        </div>
+        <>
+          <div className="options-flex">
+            {items.map((i, idx) => (
+              <div className={i.popular ? "most-used option-item" : "option-item"} key={i.id}>
+                <label className="custom-checkbox-label" title={i.name}>
+                  <input
+                    type="checkbox"
+                    className="custom-checkbox"
+                    value={i.name}
+                    data-id={i.id}
+                    checked={checked[idx] || false}
+                    onChange={e => {
+                      const newChecked = [...checked];
+                      newChecked[idx] = e.target.checked;
+                      setChecked(newChecked);
+                    }}
+                  />
+                  <span className="custom-checkbox-box">
+                    {checked[idx] && (
+                      <svg width="16" height="16" viewBox="0 0 16 16">
+                        <polyline points="4,8 7,12 12,4" style={{ fill: 'none', stroke: '#000', strokeWidth: 2 }} />
+                      </svg>
+                    )}
+                  </span>
+                  <span title={i.name}>{truncateLabel(i.name)}</span>
+                </label>
+              </div>
+            ))}
+          </div>
+        </>
       ) : (
         <>
           {popular.length > 0 && (
             <>
               <div className="group-title">
                 Most popular with guests
-                
+
               </div>
               <div className="options-flex">
                 {popular.map((i, pidx) => {
@@ -145,6 +147,7 @@ function Group({ title, items, checked, setChecked }) {
           )}
           {other.length > 0 && (
             <>
+
               {/* If no popular options, show first 12 by default, rest on show more */}
               {popular.length === 0 ? (
                 <>
@@ -180,42 +183,47 @@ function Group({ title, items, checked, setChecked }) {
                     })}
                   </div>
                   {other.length > 12 && showMore && (
-                    <div className="options-flex">
-                      {other.slice(12).map((i, oidx) => {
-                        const idx = items.findIndex(it => it.id === i.id);
-                        return (
-                          <div className="option-item" key={i.id}>
-                            <label className="custom-checkbox-label" title={i.name}>
-                              <input
-                                type="checkbox"
-                                className="custom-checkbox"
-                                value={i.name}
-                                data-id={i.id}
-                                checked={checked[idx] || false}
-                                onChange={e => {
-                                  const newChecked = [...checked];
-                                  newChecked[idx] = e.target.checked;
-                                  setChecked(newChecked);
-                                }}
-                              />
-                              <span className="custom-checkbox-box">
-                                {checked[idx] && (
-                                  <svg width="16" height="16" viewBox="0 0 16 16">
-                                    <polyline points="4,8 7,12 12,4" style={{ fill: 'none', stroke: '#000', strokeWidth: 2 }} />
-                                  </svg>
-                                )}
-                              </span>
-                              <span title={i.name}>{truncateLabel(i.name)}</span>
-                            </label>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  )}
+                    <>
+                      <div style={{ background: '#f84141ff', zIndex: 999, padding: 10 }} className="group-title">All options</div>
+
+                      <div className="options-flex">
+                        {other.slice(12).map((i, oidx) => {
+                          const idx = items.findIndex(it => it.id === i.id);
+                          return (
+                            <div className="option-item" key={i.id}>
+                              <label className="custom-checkbox-label" title={i.name}>
+                                <input
+                                  type="checkbox"
+                                  className="custom-checkbox"
+                                  value={i.name}
+                                  data-id={i.id}
+                                  checked={checked[idx] || false}
+                                  onChange={e => {
+                                    const newChecked = [...checked];
+                                    newChecked[idx] = e.target.checked;
+                                    setChecked(newChecked);
+                                  }}
+                                />
+                                <span className="custom-checkbox-box">
+                                  {checked[idx] && (
+                                    <svg width="16" height="16" viewBox="0 0 16 16">
+                                      <polyline points="4,8 7,12 12,4" style={{ fill: 'none', stroke: '#000', strokeWidth: 2 }} />
+                                    </svg>
+                                  )}
+                                </span>
+                                <span title={i.name}>{truncateLabel(i.name)}</span>
+                              </label>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </>)}
                 </>
               ) : (
                 <>
                   {showMore && (
+                    <>
+                        <div style={{marginTop:8}} className="group-title">All options</div>
                     <div className="options-flex">
                       {other.map((i, oidx) => {
                         const idx = items.findIndex(it => it.id === i.id);
@@ -247,6 +255,7 @@ function Group({ title, items, checked, setChecked }) {
                         );
                       })}
                     </div>
+                    </>
                   )}
                 </>
               )}
