@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useState } from 'react';
 import './App.css';
 
@@ -8,6 +6,9 @@ function Group({ title, items, checked, setChecked }) {
   const selectedCount = checked.filter(Boolean).length;
   // Select all logic
   const allChecked = checked.every(Boolean);
+  // Local search state for this group
+  const [search, setSearch] = useState('');
+  const filteredItems = items.filter(i => i.name.toLowerCase().includes(search.toLowerCase()));
   const popularIndexes = items.map((i, idx) => i.popular ? idx : null).filter(idx => idx !== null);
   const allPopularChecked = popularIndexes.length > 0 && popularIndexes.every(idx => checked[idx]);
   const handleSelectAllPopular = () => {
@@ -31,48 +32,11 @@ function Group({ title, items, checked, setChecked }) {
   const other = items.filter(i => !i.popular);
   const [showMore, setShowMore] = useState(false);
   const showAll = items.length < 12;
-  // ...existing code...
-
   // Helper to truncate label
   const truncateLabel = (label) => label.length > 24 ? label.slice(0, 21) + '...' : label;
 
   return (
     <fieldset className="group-fieldset">
-      <legend className="group-legend-row">
-        <span>
-          {title} <span className="section-count">({items.length})</span>
-          {selectedCount > 0 ? <span className="selected-badge">{selectedCount}</span> : null}
-        </span>
-        <div className="legend-actions">
-          <button
-            type="button"
-            className={`select-all-btn${allChecked ? ' active' : ''}`}
-            onClick={handleSelectAll}
-            title={allChecked ? 'Deselect all options' : 'Select all options'}
-          >
-            Select All
-          </button>
-          {popular.length > 0 && <button
-            type="button"
-            className={`select-all-popular-btn${allPopularChecked ? ' active' : ''}`}
-            onClick={handleSelectAllPopular}
-            title={allPopularChecked ? 'Deselect all popular options' : 'Select all popular options'}
-          >
-            Select Popular
-          </button>}
-
-          {!showAll && (
-            <button
-              type="button"
-              className="show-more-icon-btn"
-              onClick={() => setShowMore(s => !s)}
-              aria-label={showMore ? 'Hide options' : 'Show more options'}
-            >
-              <ShowHideIcon open={showMore} />
-            </button>
-          )}
-        </div>
-      </legend>
       {showAll ? (
         <>
           <div className="options-flex">
@@ -106,56 +70,32 @@ function Group({ title, items, checked, setChecked }) {
         </>
       ) : (
         <>
-          {popular.length > 0 && (
+          <div className="group-legend-row" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexGrow:1, justifyContent:'space-between' }}>
+              <span style={{ fontSize: '1.2rem', color: '#3a3a3a' }}>{title} </span>
+              <div>{selectedCount > 0 ? <><span className="selected-badge">{selectedCount}</span><span style={{fontSize:'0.75em', color:'#888'}}>/</span></> :  <span style={{fontSize:'0.75em', color:'#888'}}>0/</span>}  <span style={{marginRight:8, fontSize:'0.75em', color:'#888'}}>{items.length}</span></div>
+            </div>
+            <button
+              className="expand-collapse-btn"
+              style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, marginLeft: 'auto' }}
+              onClick={() => setShowMore(s => !s)}
+              aria-label={showMore ? 'Collapse' : 'Expand'}
+            >
+              <ShowHideIcon open={showMore} />
+            </button>
+          </div>
+          {showMore && (
             <>
-              <div className="group-title">
-                Most popular with guests
-
-              </div>
-              <div className="options-flex">
-                {popular.map((i, pidx) => {
-                  const idx = items.findIndex(it => it.id === i.id);
-                  return (
-                    <div className="most-used option-item" key={i.id}>
-                      <label className="custom-checkbox-label" title={i.name}>
-                        <input
-                          type="checkbox"
-                          className="custom-checkbox"
-                          value={i.name}
-                          data-id={i.id}
-                          checked={checked[idx] || false}
-                          onChange={e => {
-                            const newChecked = [...checked];
-                            newChecked[idx] = e.target.checked;
-                            setChecked(newChecked);
-                          }}
-                        />
-                        <span className="custom-checkbox-box">
-                          {checked[idx] && (
-                            <svg width="16" height="16" viewBox="0 0 16 16">
-                              <polyline points="4,8 7,12 12,4" style={{ fill: 'none', stroke: '#000', strokeWidth: 2 }} />
-                            </svg>
-                          )}
-                        </span>
-                        <span title={i.name}>{truncateLabel(i.name)}</span>
-                      </label>
-                    </div>
-                  );
-                })}
-              </div>
-            </>
-          )}
-          {other.length > 0 && (
-            <>
-
-              {/* If no popular options, show first 12 by default, rest on show more */}
-              {popular.length === 0 ? (
+              {popular.length > 0 && (
                 <>
+                  <div className="group-title">
+                    Most popular with guests
+                  </div>
                   <div className="options-flex">
-                    {other.slice(0, 12).map((i, oidx) => {
+                    {popular.map((i, pidx) => {
                       const idx = items.findIndex(it => it.id === i.id);
                       return (
-                        <div className="option-item" key={i.id}>
+                        <div className="most-used option-item" key={i.id}>
                           <label className="custom-checkbox-label" title={i.name}>
                             <input
                               type="checkbox"
@@ -182,10 +122,47 @@ function Group({ title, items, checked, setChecked }) {
                       );
                     })}
                   </div>
+                </>
+              )}
+              {other.length > 0 && (
+                <>
+
+                  {/* If no popular options, show first 12 by default, rest on show more */}
+                  {popular.length === 0 ? (
+                    <>
+                      <div className="options-flex">
+                        {other.slice(0, 12).map((i, oidx) => {
+                          const idx = items.findIndex(it => it.id === i.id);
+                          return (
+                            <div className="option-item" key={i.id}>
+                              <label className="custom-checkbox-label" title={i.name}>
+                                <input
+                                  type="checkbox"
+                                  className="custom-checkbox"
+                                  value={i.name}
+                                  data-id={i.id}
+                                  checked={checked[idx] || false}
+                                  onChange={e => {
+                                    const newChecked = [...checked];
+                                    newChecked[idx] = e.target.checked;
+                                    setChecked(newChecked);
+                                  }}
+                                />
+                                <span className="custom-checkbox-box">
+                                  {checked[idx] && (
+                                    <svg width="16" height="16" viewBox="0 0 16 16">
+                                      <polyline points="4,8 7,12 12,4" style={{ fill: 'none', stroke: '#000', strokeWidth: 2 }} />
+                                    </svg>
+                            </span>
+                            <span title={i.name}>{truncateLabel(i.name)}</span>
+                          </label>
+                        </div>
+                      );
+                    })}
+                  </div>
                   {other.length > 12 && showMore && (
                     <>
-                      <div style={{ background: '#f84141ff', zIndex: 999, padding: 10 }} className="group-title">All options</div>
-
+             
                       <div className="options-flex">
                         {other.slice(12).map((i, oidx) => {
                           const idx = items.findIndex(it => it.id === i.id);
@@ -268,6 +245,9 @@ function Group({ title, items, checked, setChecked }) {
 }
 
 function App() {
+  // Search state for each section
+  const [facilitiesSearch, setFacilitiesSearch] = useState('');
+  const [servicesSearch, setServicesSearch] = useState('');
   // Selection state management for all groups
   const [checkedMap, setCheckedMap] = useState({});
   const useCheckedState = (key, length) => checkedMap[key] || Array(length).fill(false);
@@ -344,13 +324,22 @@ function App() {
           <section className="top-section facilities-section">
             <div className="top-section-header">
               <h2 className="top-section-title">Facilities</h2>
+              <span style={{marginLeft:16, fontSize:'0.95em', color:'#888'}}>Total: {data && facilitiesMain.reduce((sum, {key}) => sum + (data[key]?.length || 0), 0)}</span>
+              <input
+                type="text"
+                className="section-search"
+                placeholder="Quick search..."
+                value={facilitiesSearch}
+                onChange={e => setFacilitiesSearch(e.target.value)}
+                style={{ marginLeft: 'auto', minWidth: 180, border: 'none', borderBottom: '2px solid #e0e0e0' }}
+              />
             </div>
             {facilitiesMain.map(({ key, label }) =>
               data[key] ? (
                 <Group
                   key={key}
                   title={label}
-                  items={data[key]}
+                  items={data[key].filter(i => i.name.toLowerCase().includes(facilitiesSearch.toLowerCase()))}
                   checked={useCheckedState(key, data[key].length)}
                   setChecked={getSetChecked(key, data[key].length)}
                 />
@@ -365,7 +354,7 @@ function App() {
                 <Group
                   key={key}
                   title={label}
-                  items={data[key]}
+                  items={data[key].filter(i => i.name.toLowerCase().includes(facilitiesSearch.toLowerCase()))}
                   checked={useCheckedState(key, data[key].length)}
                   setChecked={getSetChecked(key, data[key].length)}
                 />
@@ -375,13 +364,14 @@ function App() {
           <section className="top-section services-section">
             <div className="top-section-header">
               <h2 className="top-section-title">Services</h2>
+              <span style={{marginLeft:16, fontSize:'0.95em', color:'#888'}}>{data && servicesMain.reduce((sum, {key}) => sum + (data[key]?.length || 0), 0)}</span>
             </div>
             {servicesMain.map(({ key, label }) =>
               data[key] ? (
                 <Group
                   key={key}
                   title={label}
-                  items={data[key]}
+                  items={data[key].filter(i => i.name.toLowerCase().includes(servicesSearch.toLowerCase()))}
                   checked={useCheckedState(key, data[key].length)}
                   setChecked={getSetChecked(key, data[key].length)}
                 />
@@ -396,7 +386,7 @@ function App() {
                 <Group
                   key={key}
                   title={label}
-                  items={data[key]}
+                  items={data[key].filter(i => i.name.toLowerCase().includes(servicesSearch.toLowerCase()))}
                   checked={useCheckedState(key, data[key].length)}
                   setChecked={getSetChecked(key, data[key].length)}
                 />

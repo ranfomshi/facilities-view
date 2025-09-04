@@ -1,3 +1,17 @@
+.group-search {
+    border: none;
+    border-bottom: 2px solid #e0e0e0;
+    background: #fff;
+    font-size: 1rem;
+    padding: 4px 8px;
+    outline: none;
+    margin-right: 10px;
+    min-width: 140px;
+    transition: border-color 0.2s;
+}
+.group-search:focus {
+    border-bottom: 2px solid #ffd600;
+}
 /* Custom Checkbox Styles */
 .custom-checkbox-label {
     display: flex;
@@ -44,13 +58,13 @@ button {
     display: inline-block;
     background: rgb(103, 179, 101);
     color: #fff;
-    font-size: 0.95rem;
+    font-size: 0.65rem;
     font-weight: 500;
     border-radius: 12px;
-    padding: 2px 8px;
+    padding: 2px 2px;
     margin-left: 8px;
+    margin-right: 2px;
     vertical-align: middle;
-    min-width: 1.5em;
     text-align: center;
 }
 
@@ -99,7 +113,7 @@ button {
 }
 
 .yesno-toggle button.active {
-    background: #fffbe6;
+    background: #ffebb8;
     color: #222;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
     z-index: 1;
@@ -134,8 +148,9 @@ button {
 
 .legend-actions {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.5rem;
+    margin-left: auto;
 }
 
 
@@ -163,7 +178,9 @@ button {
 }
 
 .group-title {
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 8px;
     color: #616161;
     display: flex;
     align-items: center;
@@ -223,17 +240,18 @@ h1 {
     border: 1px solid #eaeaea;
     margin-bottom: 24px;
     max-width: 856px;
+    padding: 16px;
 }
 
 
 .group-legend-row {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     font-size: 1.2rem;
     color: #3a3a3a;
-    padding: 0 8px;
     font-weight: 600;
+    position: relative;
 }
 
 .show-more-icon-btn {
@@ -246,7 +264,7 @@ h1 {
 }
 
 .group-title {
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: #4a4a4a;
     margin-bottom: 0.5rem;
 }
@@ -254,7 +272,7 @@ h1 {
 .options-flex {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px;
+    gap: 8px;
     margin-top: 0.25rem;
 }
 
@@ -267,20 +285,21 @@ h1 {
 }
 
 .option-item input[type='checkbox']:checked+span {
-    color: #003366;
-    font-weight: 500;
+    background: none;
     height: 12px;
     width: 12px
 }
 
 .most-used {
-    background: #fffbe6;
-    background: #fffbe6;
+    background: none;
     min-width: 168px;
     font-size: 1em;
     display: flex;
     align-items: center;
     box-sizing: border-box;
+}
+.most-used .custom-checkbox-box {
+    border: 2px solid #ffe600;
 }
 
 .show-more-btn {
