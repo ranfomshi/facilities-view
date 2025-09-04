@@ -276,8 +276,8 @@ function App() {
   }, []);
 
   // Groupings and questions as per user pattern
-  const [barRestaurantCamping, setBarRestaurantCamping] = useState(null);
-  const [transportBusinessCatering, setTransportBusinessCatering] = useState(null);
+  const [barRestaurantCamping, setBarRestaurantCamping] = useState(false);
+  const [transportBusinessCatering, setTransportBusinessCatering] = useState(false);
 
   // Facilities groups
   const facilitiesMain = [
