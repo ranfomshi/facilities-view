@@ -96,6 +96,7 @@ button {
     overflow: hidden;
     border: 1.5px solid #e0e0e0;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    min-width: 193px;
 }
 
 .yesno-toggle button {
@@ -213,17 +214,21 @@ button {
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap');
 
+
 body {
-    background: #f7f7fa;
+    background: #fff;
     font-family: 'Roboto', 'Roboto Condensed', Arial, sans-serif;
+    overflow: auto !important;
+    min-height: 100vh;
 }
 
 .container {
-    max-width: 1400px;
+    max-width: 935px;
     margin: 2rem auto;
     background: #fff;
     border-radius: 4px;
     padding: 2rem 2.5rem;
+    overflow: auto;
 }
 
 h1 {
@@ -299,7 +304,7 @@ h1 {
     box-sizing: border-box;
 }
 .most-used .custom-checkbox-box {
-    border: 2px solid #ffe600;
+    border: 2px solid #dbca10;
 }
 
 .show-more-btn {

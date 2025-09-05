@@ -1,5 +1,5 @@
 {
-    "Ground facilities0/46": [
+    "Ground facilities": [
         {
             "id": "3",
             "name": "Air conditioning",
@@ -231,7 +231,7 @@
             "popular": false
         }
     ],
-    "Parking facilities1/15": [
+    "Parking facilities": [
         {
             "id": "10010",
             "name": "Accessible parking",
@@ -308,7 +308,7 @@
             "popular": false
         }
     ],
-    "On-premise facilities1/27": [
+    "On-premise facilities": [
         {
             "id": "8",
             "name": "Beauty or spa facilities",
@@ -445,7 +445,7 @@
             "popular": false
         }
     ],
-    "Sustainability6/20": [
+    "Sustainability": [
         {
             "id": "177",
             "name": "Carbon offsetting",
@@ -547,7 +547,7 @@
             "popular": false
         }
     ],
-    "Bars & Restaurants0/8": [
+    "Bars & Restaurants": [
         {
             "id": "6",
             "name": "Bar",
@@ -589,7 +589,7 @@
             "popular": false
         }
     ],
-    "Campsites0/6": [
+    "Campsites": [
         {
             "id": "245",
             "name": "30 amp hookup",
@@ -621,7 +621,7 @@
             "popular": false
         }
     ],
-    "Equipment0/14": [
+    "Equipment": [
         {
             "id": "59",
             "name": "Equipment rental",
@@ -693,7 +693,7 @@
             "popular": false
         }
     ],
-    "Guest services3/18": [
+    "Guest services": [
         {
             "id": "1",
             "name": "24h reception",
@@ -785,7 +785,7 @@
             "popular": false
         }
     ],
-    "Children services1/13": [
+    "Children services": [
         {
             "id": "20002",
             "name": "Babysitting",
@@ -852,7 +852,7 @@
             "popular": false
         }
     ],
-    "Cleaning services2/9": [
+    "Cleaning services": [
         {
             "id": "46",
             "name": "Cleaning service",
@@ -899,7 +899,7 @@
             "popular": false
         }
     ],
-    "Breakfast options1/14": [
+    "Breakfast options": [
         {
             "id": "40022",
             "name": "Breakfast to-go",
@@ -971,7 +971,7 @@
             "popular": false
         }
     ],
-    "Transport & Ticketing0/9": [
+    "Transport & Ticketing": [
         {
             "id": "256",
             "name": "Airport shuttle (free)",
@@ -1018,7 +1018,7 @@
             "popular": false
         }
     ],
-    "Business services2/13": [
+    "Business services": [
         {
             "id": "30001",
             "name": "Business facilities",
@@ -1085,7 +1085,7 @@
             "popular": false
         }
     ],
-    "Meals & catering0/23": [
+    "Meals & catering": [
         {
             "id": "40016",
             "name": "All-inclusive",
@@ -1202,7 +1202,7 @@
             "popular": false
         }
     ],
-    "Hygiene Security2/29": [
+    "Hygiene Security": [
         {
             "id": "122",
             "name": "Disinfected between stays",
@@ -1349,7 +1349,7 @@
             "popular": false
         }
     ],
-    "Activities and Experiences3/93": [
+    "Activities and Experiences": [
         {
             "id": "50080",
             "name": "Adventure",
