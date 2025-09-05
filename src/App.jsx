@@ -257,15 +257,16 @@ function App() {
   const getSetChecked = (key, length) => (newChecked) => {
     setCheckedMap(prev => ({ ...prev, [key]: newChecked }));
   };
+  const [dataSource, setDataSource] = useState('facilities.json');
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('/facilities.json')
+    fetch(`/${dataSource}`)
       .then(r => r.json())
       .then(setData)
-      .catch(() => setError('Could not load facilities.json'));
-  }, []);
+      .catch(() => setError(`Could not load ${dataSource}`));
+  }, [dataSource]);
 
   // Groupings and questions as per user pattern
   const [barRestaurantCamping, setBarRestaurantCamping] = useState(false);
@@ -321,13 +322,18 @@ function App() {
 
   return (
     <div className="container">
+      <div style={{display:'flex', alignItems:'center', gap:16, marginBottom:24}}>
+        <span style={{fontWeight:'bold', fontSize:'1.1em'}}>Facilities View</span>
+        <button onClick={() => setDataSource(dataSource === 'facilities.json' ? 'facilities-all-unpopular.json' : 'facilities.json')} style={{padding:'4px 12px', fontSize:'0.95em', borderRadius:4, border:'1px solid #ccc', background:'#f9f9f9', cursor:'pointer'}}>
+          Switch to {dataSource === 'facilities.json' ? 'Unpopular Version' : 'Popular Version'}
+        </button>
+      </div>
       {error && <div style={{ color: 'red' }}>{error}</div>}
       {data && (
         <>
           <section className="top-section facilities-section">
             <div className="top-section-header">
               <h2 className="top-section-title">Facilities</h2>
-              <span style={{marginLeft:16, fontSize:'0.95em', color:'#888'}}>Total: {data && facilitiesMain.reduce((sum, {key}) => sum + (data[key]?.length || 0), 0)}</span>
               <input
                 type="text"
                 className="section-search"
@@ -367,7 +373,6 @@ function App() {
           <section className="top-section services-section">
             <div className="top-section-header">
               <h2 className="top-section-title">Services</h2>
-              <span style={{marginLeft:16, fontSize:'0.95em', color:'#888'}}>{data && servicesMain.reduce((sum, {key}) => sum + (data[key]?.length || 0), 0)}</span>
             </div>
             {servicesMain.map(({ key, label }) =>
               data[key] ? (
