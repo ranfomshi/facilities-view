@@ -93,7 +93,9 @@ function Group({ title, items, checked, setChecked }) {
            <></>
           )}
           {other.length > 0 && (
+            <><div className="group-title">Most popular with guests</div>
             <div className="options-flex">
+              
               {other.map((i, oidx) => {
                 const idx = items.findIndex(it => it.id === i.id);
                 const selected = checked[idx] || false;
@@ -126,7 +128,7 @@ function Group({ title, items, checked, setChecked }) {
                 );
               })}
             </div>
-          )}
+         </> )}
         </>
       ) : null}
     </fieldset>
