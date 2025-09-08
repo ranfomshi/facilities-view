@@ -180,7 +180,6 @@ function FlatView() {
                                                             cursor:'pointer',
                                                             padding:0,
                                                             position:'relative',
-                                                            top:'-1px'
                                                         }}
                                                         title="Remove"
                                                     >×</button>

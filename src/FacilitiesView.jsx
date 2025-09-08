@@ -257,7 +257,6 @@ function FacilitiesView({ dataSource, setDataSource }) {
                               marginLeft:'4px',
                               cursor:'pointer',
                               padding:0,
-                              lineHeight:'1',
                               position:'relative',
                             }}
                             title="Remove"
