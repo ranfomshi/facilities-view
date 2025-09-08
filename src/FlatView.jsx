@@ -179,7 +179,6 @@ function FlatView() {
                                                             marginLeft:'4px',
                                                             cursor:'pointer',
                                                             padding:0,
-                                                            lineHeight:'1',
                                                             position:'relative',
                                                             top:'-1px'
                                                         }}

@@ -227,20 +227,24 @@ function FacilitiesView({ dataSource, setDataSource }) {
                         }
                       };
                       return (
-                        <span key={item.id} style={{
-                          background:'#fff',
-                          border:'1px solid #e0e0e0',
-                          borderRadius:'8px',
-                          padding:'1px 4px',
-                          fontSize:'0.8em',
-                          marginBottom:'2px',
-                          color:'#333',
-                          boxShadow:'0 1px 2px rgba(0,0,0,0.04)',
-                          display:'inline-flex',
-                          alignItems:'center',
-                          gap:'0.3em',
-                          position:'relative'
-                        }}>
+                        <span
+                          key={item.id}
+                          className="group-pill"
+                          style={{
+                            background:'#fff',
+                            border:'1px solid #e0e0e0',
+                            borderRadius:'8px',
+                            padding:'1px 4px',
+                            fontSize:'0.8em',
+                            marginBottom:'2px',
+                            color:'#333',
+                            boxShadow:'0 1px 2px rgba(0,0,0,0.04)',
+                            display:'inline-flex',
+                            alignItems:'center',
+                            gap:'0.3em',
+                            position:'relative'
+                          }}
+                        >
                           {item.name}
                           <button
                             onClick={handleRemove}
