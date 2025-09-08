@@ -31,13 +31,13 @@ function Group({ title, items, checked, setChecked, dataSource }) {
   const other = items.filter(i => !i.popular);
   const [showMore, setShowMore] = useState(false);
   // Helper to truncate label
-  const truncateLabel = (label) => label.length > 18 ? label.slice(0, 14) + '...' : label;
+  const truncateLabel = (label) => label.length > 30 ? label.slice(0, 28) + '...' : label;
 
   return (
     <fieldset className="group-fieldset">
       <div className="group-legend-row" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexGrow:1, justifyContent:'space-between' }}>
-          <span style={{ fontSize: '1.2rem', color: '#3a3a3a' }}>{title} </span>
+          <span style={{ fontSize: '1.2rem', fontWeight:'200', color: '#3a3a3a' }}>{title} </span>
           <div>{selectedCount > 0 ? <><span className="selected-badge">{selectedCount}</span><span style={{fontSize:'0.75em', color:'#888'}}>/</span></> :  <span style={{fontSize:'0.75em', color:'#888'}}>0/</span>}  <span style={{marginRight:8, fontSize:'0.75em', color:'#888'}}>{items.length}</span></div>
         </div>
         <button
@@ -57,7 +57,7 @@ function Group({ title, items, checked, setChecked, dataSource }) {
           {popular.length > 0 && (
             <div className="options-flex" style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))',
+              gridTemplateColumns: 'repeat(4, minmax(0, 1fr))',
               gap: '5px 6px',
               alignItems: 'start',
               marginBottom: '0.5em'
@@ -95,10 +95,10 @@ function Group({ title, items, checked, setChecked, dataSource }) {
           )}
           {other.length > 0 &&  (
             <>
-             {dataSource !== 'facilities-all-unpopular.json' &&<div className="group-title">All options</div>} 
+             {dataSource !== 'facilities-all-unpopular.json' &&<div className="group-title">Additional options</div>} 
               <div className="options-flex" style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))',
+                gridTemplateColumns: 'repeat(4, minmax(0, 1fr))',
                 gap: '6px 8px',
                 alignItems: 'start',
                 marginBottom: '0.5em'
@@ -116,7 +116,7 @@ function Group({ title, items, checked, setChecked, dataSource }) {
                         border: selected ? '2px solid #dbca10' : '2px solid #e0e0e0',
                         borderRadius: '8px',
                         padding: '2px 6px',
-                        fontSize: '0.8em',
+                        fontSize: '0.78em',
                         fontWeight: 500,
                         color: '#3a3a3a',
                         boxSizing: 'border-box',

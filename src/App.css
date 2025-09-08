@@ -236,7 +236,7 @@ button {
 .top-section-title {
     font-size: 18px;
     font-family: 'Roboto Condensed', 'Roboto', Arial, sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 2rem;
     color: rgb(33, 33, 33);
 }
@@ -278,6 +278,7 @@ h1 {
     border: 1px solid #eaeaea;
     margin-bottom: 24px;
     max-width: 856px;
+    min-width: 856px;
     padding: 16px;
 }
 

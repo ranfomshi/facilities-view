@@ -59,26 +59,35 @@ function FlatView() {
     return (
         <div className="container" style={{display:'flex', gap:8}}>
             <div style={{flex:2}}>
-                <div style={{display:'flex', alignItems:'center', gap:16, marginBottom:24}}>
-                    <Select
-                        mode="multiple"
-                        allowClear
-                        style={{ minWidth: 220 }}
-                        placeholder="Filter by category"
-                        value={selectedCategories}
-                        onChange={setSelectedCategories}
-                    >
-                        {allCategories.map(cat => (
-                            <Option key={cat} value={cat}>{cat}</Option>
-                        ))}
-                    </Select>
-                    <input
-                        type="text"
-                        value={quickSearch}
-                        onChange={e => setQuickSearch(e.target.value)}
-                        placeholder="Quick search..."
-                        style={{ minWidth: 160, padding: '4px 8px', border: 'none', borderBottom: '2px solid #e0e0e0', fontSize: '1em', outline: 'none' }}
-                    />
+                <div style={{
+  position: 'sticky',
+  top: '1.5rem',
+  zIndex: 11,
+  background: '#fff',
+  padding: '0.5rem 0',
+  marginBottom: 24,
+}}>
+                    <div style={{display:'flex', alignItems:'center', gap:16}}>
+                        <Select
+                            mode="multiple"
+                            allowClear
+                            style={{ minWidth: 220 }}
+                            placeholder="Filter by category"
+                            value={selectedCategories}
+                            onChange={setSelectedCategories}
+                        >
+                            {allCategories.map(cat => (
+                                <Option key={cat} value={cat}>{cat}</Option>
+                            ))}
+                        </Select>
+                        <input
+                            type="text"
+                            value={quickSearch}
+                            onChange={e => setQuickSearch(e.target.value)}
+                            placeholder="Quick search..."
+                            style={{ minWidth: 160, padding: '4px 8px', border: 'none', borderBottom: '2px solid #e0e0e0', fontSize: '1em', outline: 'none' }}
+                        />
+                    </div>
                 </div>
                 {error && <div style={{ color: 'red' }}>{error}</div>}
                 {!data ? (
@@ -123,8 +132,8 @@ function FlatView() {
             {/* Review panel on the right - pill style with remove button */}
             <div className="review-panel-sticky" style={{
                 flex: 1,
-                background: '#fafafa',
-                border: '1px solid #eee',
+                // background: '#fafafa',
+                // border: '1px solid #eee',
                 borderRadius: 8,
                 padding: '1rem 1rem 1rem 1rem',
                 minWidth: 220,
@@ -143,12 +152,10 @@ function FlatView() {
                 ) : (
                     <div style={{display:'flex', flexDirection:'column', gap:'0.5rem'}}>
                         {Object.entries(selectedItemsByCategory).map(([category, items]) => {
-                            const total = flatItems.filter(i => i.category === category).length;
                             return (
                                 <div key={category} style={{marginBottom:0, borderBottom:'1px solid #eee', paddingBottom:'0.5em'}}>
                                     <div style={{fontWeight:'bold', marginBottom:'0.2rem', fontSize:'1em', display:'flex', justifyContent:'space-between', alignItems:'center'}}>
                                         <span>{category}</span>
-                                        <span style={{color:'#888', fontWeight:'normal', fontSize:'0.95em'}}>({items.length}/{total})</span>
                                     </div>
                                     <div style={{display:'flex', flexWrap:'wrap', gap:'0.3em'}}>
                                         {items.map(item => {
