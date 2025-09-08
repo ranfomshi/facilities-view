@@ -161,9 +161,10 @@ function FacilitiesView({ dataSource, setDataSource }) {
         position: 'sticky',
         top: '1.5rem',
         alignSelf: 'flex-start',
-        zIndex: 10
+        zIndex: 10,
+        transform:'translateY(58px)'
       }}>
-        <h3 style={{marginTop:0, marginBottom:'0.7rem', fontSize:'1.1em', fontWeight:600}}>Review Selections</h3>
+        <h3 style={{marginTop:0, marginBottom:'0.7rem', fontSize:'1.1em', fontWeight:600}}>Selections</h3>
         {Object.keys(selectedItemsByGroup).length === 0 ? (
           <div style={{color:'#888', fontSize:'0.98em'}}>No items selected.</div>
         ) : (
