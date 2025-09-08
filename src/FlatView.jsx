@@ -135,7 +135,7 @@ function FlatView() {
                 top: '1.5rem',
                 alignSelf: 'flex-start',
                 zIndex: 10,
-                transform:'translateY(58px)'
+                transform:'translateY(95px)'
             }}>
                 <h3 style={{marginTop:0, marginBottom:'0.7rem', fontSize:'1.1em', fontWeight:600}}>Selections</h3>
                 {Object.keys(selectedItemsByCategory).length === 0 ? (

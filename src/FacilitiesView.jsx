@@ -115,8 +115,8 @@ function FacilitiesView({ dataSource, setDataSource }) {
                       height: '20px'
                     }}>
                       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style={{ display: 'block' }}>
-                        <circle cx="9" cy="9" r="7" stroke="#888" strokeWidth="2" />
-                        <line x1="15.5" y1="17.5" x2="12.5" y2="14.5" stroke="#888" strokeWidth="2" strokeLinecap="round" />
+                        <circle cx="9" cy="9" r="7" stroke="#000" strokeWidth="1" />
+                        <line x1="15.5" y1="17.5" x2="12.5" y2="14.5" stroke="#000" strokeWidth="1" strokeLinecap="round" />
                       </svg>
                     </span>
                     <input
@@ -126,7 +126,7 @@ function FacilitiesView({ dataSource, setDataSource }) {
                       value={facilitiesSearch}
                       onChange={e => setFacilitiesSearch(e.target.value)}
                       style={{
-                        color: 'rgb(33, 33, 33)',
+                        color: '#212121ff',
                         cursor: 'default',
                         display: 'block',
                         fontFamily: 'Roboto, sans-serif',
@@ -134,10 +134,13 @@ function FacilitiesView({ dataSource, setDataSource }) {
                         fontWeight: 400,
                         height: '36px',
                         width: '100%',
-                        border:'1px solid black',
+                        border:'1px solid #e0e0e0',
                         borderRadius:'100px',
-                        paddingLeft: '44px'
+                        paddingLeft: '44px',
+                        outline: 'none'
                       }}
+                      onFocus={e => e.target.style.border = '1px solid #000'}
+                      onBlur={e => e.target.style.border = '1px solid #e0e0e0'}
                     />
                   </div>
                 </div>
@@ -196,7 +199,7 @@ function FacilitiesView({ dataSource, setDataSource }) {
         top: '1.5rem',
         alignSelf: 'flex-start',
         zIndex: 10,
-        transform:'translateY(58px)'
+        transform:'translateY(95px)'
       }}>
         <h3 style={{marginTop:0, marginBottom:'0.7rem', fontSize:'1.1em', fontWeight:600}}>Selections</h3>
         {Object.keys(selectedItemsByGroup).length === 0 ? (
