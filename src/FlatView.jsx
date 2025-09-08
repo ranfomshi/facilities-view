@@ -57,7 +57,7 @@ function FlatView() {
     }, [flatItems, checkedMap]);
 
     return (
-        <div className="container" style={{display:'flex', gap:32}}>
+        <div className="container" style={{display:'flex', gap:8}}>
             <div style={{flex:2}}>
                 <div style={{display:'flex', alignItems:'center', gap:16, marginBottom:24}}>
                     <Select
@@ -86,25 +86,33 @@ function FlatView() {
                 ) : (
                     <div style={{marginTop:24, maxHeight:'60vh', overflowY:'auto', border:'1px solid #eee', borderRadius:8}}>
                         <table style={{width:'100%', borderCollapse:'collapse'}}>
-                            <thead>
+                            {/* <thead>
                                 <tr style={{background:'#f0f0f0'}}>
                                     <th style={{textAlign:'left', padding:'8px', borderBottom:'1px solid #ddd'}}></th>
                                     <th style={{textAlign:'left', padding:'8px', borderBottom:'1px solid #ddd'}}>Item</th>
                                     <th style={{textAlign:'left', padding:'8px', borderBottom:'1px solid #ddd'}}>Category</th>
                                 </tr>
-                            </thead>
+                            </thead> */}
                             <tbody>
                                 {filteredItems.map(item => (
-                                    <tr key={item.id}>
+                                    <tr
+                                        key={item.id}
+                                        className={`flatview-row${checkedMap[item.id] ? ' flatview-row-selected' : ''}`}
+                                        style={{
+                                            cursor: 'pointer',
+                                            transition: 'background 0.2s'
+                                        }}
+                                        onClick={() => handleCheck(item.id)}
+                                    >
                                         <td style={{padding:'8px', borderBottom:'1px solid #eee'}}>
                                             <input
                                                 type="checkbox"
                                                 checked={!!checkedMap[item.id]}
-                                                onChange={() => handleCheck(item.id)}
+                                                onChange={e => { e.stopPropagation(); handleCheck(item.id); }}
                                             />
                                         </td>
-                                        <td style={{padding:'8px', borderBottom:'1px solid #eee'}}>{item.name}</td>
-                                        <td style={{padding:'8px', borderBottom:'1px solid #eee'}}>{item.category}</td>
+                                        <td style={{padding:'4px', borderBottom:'1px solid #eee'}}>{item.name}</td>
+                                        <td style={{padding:'4px', borderBottom:'1px solid #eee', fontSize:'smaller', fontWeight:'bold'}}>{item.category}</td>
                                     </tr>
                                 ))}
                             </tbody>
@@ -112,27 +120,78 @@ function FlatView() {
                     </div>
                 )}
             </div>
-            {/* Review panel on the right */}
-            <div style={{flex:1, background:'#fafafa', border:'1px solid #eee', borderRadius:8, padding:'1.5rem', minWidth:260, maxHeight:'80vh', overflowY:'auto'}}>
-                <h3 style={{marginTop:0, marginBottom:'1rem'}}>Review Selections</h3>
+            {/* Review panel on the right - pill style with remove button */}
+            <div className="review-panel-sticky" style={{
+                flex: 1,
+                background: '#fafafa',
+                border: '1px solid #eee',
+                borderRadius: 8,
+                padding: '1rem 1rem 1rem 1rem',
+                minWidth: 220,
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '0.5rem',
+                position: 'sticky',
+                top: '1.5rem',
+                alignSelf: 'flex-start',
+                zIndex: 10
+            }}>
+                <h3 style={{marginTop:0, marginBottom:'0.7rem', fontSize:'1.1em', fontWeight:600}}>Review Selections</h3>
                 {Object.keys(selectedItemsByCategory).length === 0 ? (
-                    <div style={{color:'#888'}}>No items selected.</div>
+                    <div style={{color:'#888', fontSize:'0.98em'}}>No items selected.</div>
                 ) : (
-                    Object.entries(selectedItemsByCategory).map(([category, items]) => {
-                        const total = flatItems.filter(i => i.category === category).length;
-                        return (
-                            <div key={category} style={{marginBottom:'1.2rem'}}>
-                                <div style={{fontWeight:'bold', marginBottom:'0.5rem'}}>
-                                    {category} <span style={{color:'#888', fontWeight:'normal'}}>({items.length}/{total})</span>
+                    <div style={{display:'flex', flexDirection:'column', gap:'0.5rem'}}>
+                        {Object.entries(selectedItemsByCategory).map(([category, items]) => {
+                            const total = flatItems.filter(i => i.category === category).length;
+                            return (
+                                <div key={category} style={{marginBottom:0, borderBottom:'1px solid #eee', paddingBottom:'0.5em'}}>
+                                    <div style={{fontWeight:'bold', marginBottom:'0.2rem', fontSize:'1em', display:'flex', justifyContent:'space-between', alignItems:'center'}}>
+                                        <span>{category}</span>
+                                        <span style={{color:'#888', fontWeight:'normal', fontSize:'0.95em'}}>({items.length}/{total})</span>
+                                    </div>
+                                    <div style={{display:'flex', flexWrap:'wrap', gap:'0.3em'}}>
+                                        {items.map(item => {
+                                            const handleRemove = () => {
+                                                setCheckedMap(prev => ({ ...prev, [item.id]: false }));
+                                            };
+                                            return (
+                                                <span
+                                                    key={item.id}
+                                                    className={`group-pill group-pill-selected`}
+                                                    title={item.name}
+                                                    style={{
+                                                        display:'inline-flex',
+                                                        alignItems:'center',
+                                                        gap:'0.3em',
+                                                        position:'relative'
+                                                    }}
+                                                >
+                                                    {item.name}
+                                                    <button
+                                                        onClick={handleRemove}
+                                                        style={{
+                                                            background:'none',
+                                                            border:'none',
+                                                            color:'#c00',
+                                                            fontWeight:'bold',
+                                                            fontSize:'1em',
+                                                            marginLeft:'4px',
+                                                            cursor:'pointer',
+                                                            padding:0,
+                                                            lineHeight:'1',
+                                                            position:'relative',
+                                                            top:'-1px'
+                                                        }}
+                                                        title="Remove"
+                                                    >×</button>
+                                                </span>
+                                            );
+                                        })}
+                                    </div>
                                 </div>
-                                <ul style={{margin:0, paddingLeft:'1.2em', listStyleType: 'none'}}>
-                                    {items.map(item => (
-                                        <li key={item.id}>{item.name}</li>
-                                    ))}
-                                </ul>
-                            </div>
-                        );
-                    })
+                            );
+                        })}
+                    </div>
                 )}
             </div>
         </div>

@@ -1,3 +1,28 @@
+/* Sticky review panel for FacilitiesView */
+.review-panel-sticky {
+    position: sticky;
+    top: 1.5rem;
+    z-index: 10;
+    align-self: flex-start;
+}
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap');
+
+
+
+/* FlatView table row style tweaks */
+.flatview-row-selected,
+.flatview-row {
+    font-size: 0.95em;
+    height: 32px;
+    min-height: 0;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+/* Highlight selected table row in FlatView */
+.flatview-row-selected {
+    background: #ffebb8 !important;
+}
 .group-search {
     border: none;
     border-bottom: 2px solid #e0e0e0;
@@ -96,7 +121,7 @@ button {
     overflow: hidden;
     border: 1.5px solid #e0e0e0;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
-    min-width: 193px;
+    min-width: 186px;
 }
 
 .yesno-toggle button {
@@ -124,10 +149,16 @@ button {
     background: #fffade;
 }
 
+.menu-container{
+    background-color: rgba(240, 240, 240, 0.432);
+    margin: auto;
+}
+
 .top-section-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: #fff;
 }
 
 .expand-top-btn {
@@ -190,7 +221,6 @@ button {
 
 .top-section {
     margin-bottom: 3.5rem;
-    padding: 1rem 1.5rem 0.5rem 1.5rem;
     border-radius: 4px;
 
 }
@@ -211,9 +241,6 @@ button {
     color: rgb(33, 33, 33);
 }
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap');
-
 
 body {
     background: #fff;
@@ -223,7 +250,7 @@ body {
 }
 
 .container {
-    max-width: 935px;
+    max-width: 1200px;
     margin: 2rem auto;
     background: #fff;
     border-radius: 4px;
@@ -238,9 +265,15 @@ h1 {
 }
 
 
+.container {
+    display: flex;
+    gap: 8px;
+    overflow: visible;
+    height: auto;
+}
 .group-fieldset {
     background: #fff;
-    border-radius: 4px;
+    border-radius: 8px;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
     border: 1px solid #eaeaea;
     margin-bottom: 24px;
@@ -277,7 +310,7 @@ h1 {
 .options-flex {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 2px;
     margin-top: 0.25rem;
 }
 
@@ -297,7 +330,6 @@ h1 {
 
 .most-used {
     background: none;
-    min-width: 168px;
     font-size: 1em;
     display: flex;
     align-items: center;

@@ -6,43 +6,31 @@ import './App.css';
 
 
 function App() {
-	const [selectedView, setSelectedView] = useState('facilities');
+
+		const [selectedView, setSelectedView] = useState('facilities');
+		const [dataSource, setDataSource] = useState('facilities.json');
 
 	return (
 		<div className="menu-container" style={{ padding: '2rem', position:'absolute', top:0 }}>
-			<h1 style={{ marginBottom: '2rem' }}>Facilities App Menu</h1>
-					<div style={{ marginBottom: '2rem' }}>
+				
+					<div style={{ marginBottom: '2rem' }}>	<button onClick={() => setDataSource(dataSource === 'facilities.json' ? 'facilities-all-unpopular.json' : 'facilities.json')} >
+						Switch to {dataSource === 'facilities.json' ? 'Unpopular Version' : 'Popular Version'}
+					</button>
 						<button
 							onClick={() => setSelectedView('facilities')}
-							style={{
-								marginRight: 12,
-								padding: '8px 20px',
-								fontSize: '1em',
-								borderRadius: 6,
-								border: '1px solid #ccc',
-								background: selectedView === 'facilities' ? '#e0e0ff' : '#f9f9f9',
-								cursor: 'pointer'
-							}}
+					
 						>
-							Facilities View
+							Grouped View
 						</button>
 						<button
 							onClick={() => setSelectedView('flat')}
-							style={{
-								marginRight: 12,
-								padding: '8px 20px',
-								fontSize: '1em',
-								borderRadius: 6,
-								border: '1px solid #ccc',
-								background: selectedView === 'flat' ? '#e0e0ff' : '#f9f9f9',
-								cursor: 'pointer'
-							}}
+				
 						>
 							Flat
 						</button>
 					</div>
 					<div style={{ marginTop: '2rem' }}>
-						{selectedView === 'facilities' && <FacilitiesView />}
+					{selectedView === 'facilities' && <FacilitiesView dataSource={dataSource} setDataSource={setDataSource} />}
 						{selectedView === 'flat' && <FlatView />}
 					</div>
 		</div>
