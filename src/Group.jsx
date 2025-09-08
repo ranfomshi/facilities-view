@@ -31,7 +31,7 @@ function Group({ title, items, checked, setChecked }) {
   const other = items.filter(i => !i.popular);
   const [showMore, setShowMore] = useState(false);
   // Helper to truncate label
-  const truncateLabel = (label) => label.length > 24 ? label.slice(0, 21) + '...' : label;
+  const truncateLabel = (label) => label.length > 18 ? label.slice(0, 14) + '...' : label;
 
   return (
     <fieldset className="group-fieldset">
@@ -49,13 +49,19 @@ function Group({ title, items, checked, setChecked }) {
           <ShowHideIcon open={showMore} />
         </button>
       </div>
-  {showMore ? (
+      {showMore ? (
         <>
           {popular.length > 0 && (
             <div className="group-title">Most popular with guests</div>
           )}
           {popular.length > 0 && (
-            <div className="options-flex">
+            <div className="options-flex" style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))',
+              gap: '5px 6px',
+              alignItems: 'start',
+              marginBottom: '0.5em'
+            }}>
               {popular.map((i, pidx) => {
                 const idx = items.findIndex(it => it.id === i.id);
                 const selected = checked[idx] || false;
@@ -65,13 +71,11 @@ function Group({ title, items, checked, setChecked }) {
                     className={`group-pill most-used${selected ? ' group-pill-selected' : ''}`}
                     title={i.name}
                     style={{
-                      display: 'inline-block',
                       background: selected ? '#ffe082' : '#fffbe6',
                       border: selected ? '2px solid #dbca10' : '2px solid #dbca10',
-                      borderRadius: '16px',
-                      padding: '2px 6px',
-                      margin: '2px 4px',
-                      fontSize: '0.8em',
+                      borderRadius: '8px',
+                      padding: '2px 4px',
+                      fontSize: '0.72em',
                       fontWeight: 500,
                       color: '#3a3a3a',
                       boxSizing: 'border-box',
@@ -90,45 +94,48 @@ function Group({ title, items, checked, setChecked }) {
             </div>
           )}
           {other.length > 0 && (
-           <></>
+            <>
+              <div className="group-title">All options</div>
+              <div className="options-flex" style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))',
+                gap: '6px 8px',
+                alignItems: 'start',
+                marginBottom: '0.5em'
+              }}>
+                {other.map((i, oidx) => {
+                  const idx = items.findIndex(it => it.id === i.id);
+                  const selected = checked[idx] || false;
+                  return (
+                    <span
+                      key={i.id}
+                      className={`group-pill${selected ? ' group-pill-selected' : ''}`}
+                      title={i.name}
+                      style={{
+                        background: selected ? '#ffe082' : '#f7f7fa',
+                        border: selected ? '2px solid #dbca10' : '2px solid #e0e0e0',
+                        borderRadius: '8px',
+                        padding: '2px 6px',
+                        fontSize: '0.8em',
+                        fontWeight: 500,
+                        color: '#3a3a3a',
+                        boxSizing: 'border-box',
+                  //      height:'47px',
+                        boxShadow: selected ? '0 2px 6px rgba(0,0,0,0.08)' : '0 1px 2px rgba(0,0,0,0.04)',
+                        cursor: 'pointer',
+                        transition: 'background 0.15s, border 0.15s, box-shadow 0.15s'
+                      }}
+                      onClick={() => {
+                        const newChecked = [...checked];
+                        newChecked[idx] = !selected;
+                        setChecked(newChecked);
+                      }}
+                    >{truncateLabel(i.name)}</span>
+                  );
+                })}
+              </div>
+            </>
           )}
-          {other.length > 0 && (
-            <><div className="group-title">Most popular with guests</div>
-            <div className="options-flex">
-              
-              {other.map((i, oidx) => {
-                const idx = items.findIndex(it => it.id === i.id);
-                const selected = checked[idx] || false;
-                return (
-                  <span
-                    key={i.id}
-                    className={`group-pill${selected ? ' group-pill-selected' : ''}`}
-                    title={i.name}
-                    style={{
-                      display: 'inline-block',
-                      background: selected ? '#ffe082' : '#f7f7fa',
-                      border: selected ? '2px solid #dbca10' : '2px solid #e0e0e0',
-                      borderRadius: '16px',
-                      padding: '2px 6px',
-                      margin: '2px 4px',
-                      fontSize: '0.8em',
-                      fontWeight: 500,
-                      color: '#3a3a3a',
-                      boxSizing: 'border-box',
-                      boxShadow: selected ? '0 2px 6px rgba(0,0,0,0.08)' : '0 1px 2px rgba(0,0,0,0.04)',
-                      cursor: 'pointer',
-                      transition: 'background 0.15s, border 0.15s, box-shadow 0.15s'
-                    }}
-                    onClick={() => {
-                      const newChecked = [...checked];
-                      newChecked[idx] = !selected;
-                      setChecked(newChecked);
-                    }}
-                  >{truncateLabel(i.name)}</span>
-                );
-              })}
-            </div>
-         </> )}
         </>
       ) : null}
     </fieldset>
