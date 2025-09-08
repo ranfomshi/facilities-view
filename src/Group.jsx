@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Group({ title, items, checked, setChecked }) {
+function Group({ title, items, checked, setChecked, dataSource }) {
   // Count selected
   const selectedCount = checked.filter(Boolean).length;
   // Select all logic
@@ -93,9 +93,9 @@ function Group({ title, items, checked, setChecked }) {
               })}
             </div>
           )}
-          {other.length > 0 && (
+          {other.length > 0 &&  (
             <>
-              <div className="group-title">All options</div>
+             {dataSource !== 'facilities-all-unpopular.json' &&<div className="group-title">All options</div>} 
               <div className="options-flex" style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))',
@@ -120,7 +120,6 @@ function Group({ title, items, checked, setChecked }) {
                         fontWeight: 500,
                         color: '#3a3a3a',
                         boxSizing: 'border-box',
-                  //      height:'47px',
                         boxShadow: selected ? '0 2px 6px rgba(0,0,0,0.08)' : '0 1px 2px rgba(0,0,0,0.04)',
                         cursor: 'pointer',
                         transition: 'background 0.15s, border 0.15s, box-shadow 0.15s'

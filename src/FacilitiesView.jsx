@@ -94,6 +94,7 @@ function FacilitiesView({ dataSource, setDataSource }) {
 
   return (
     <div className="container" style={{display:'flex', gap:8}}>
+      
       <div style={{flex:2}}>
    
         {error && <div style={{ color: 'red' }}>{error}</div>}
@@ -101,20 +102,53 @@ function FacilitiesView({ dataSource, setDataSource }) {
           <>
             {/* Facilities Section: Only show if at least one group has results */}
             <section className="top-section facilities-section">
+                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.5em', position: 'relative', textAlign:'center', margin:'auto', width:'100%', justifyContent: 'center' }}>
+                  <div style={{ position: 'relative', width: '400px', margin: '0 auto' }}>
+                    <span className="icons" style={{
+                      position: 'absolute',
+                      left: '16px',
+                      top: '50%',
+                      transform: 'translateY(-50%)',
+                      zIndex: 2,
+                      display: 'flex',
+                      alignItems: 'center',
+                      height: '20px'
+                    }}>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style={{ display: 'block' }}>
+                        <circle cx="9" cy="9" r="7" stroke="#888" strokeWidth="2" />
+                        <line x1="15.5" y1="17.5" x2="12.5" y2="14.5" stroke="#888" strokeWidth="2" strokeLinecap="round" />
+                      </svg>
+                    </span>
+                    <input
+                      type="text"
+                      className="section-search"
+                      placeholder="Quick search..."
+                      value={facilitiesSearch}
+                      onChange={e => setFacilitiesSearch(e.target.value)}
+                      style={{
+                        color: 'rgb(33, 33, 33)',
+                        cursor: 'default',
+                        display: 'block',
+                        fontFamily: 'Roboto, sans-serif',
+                        fontSize: '14px',
+                        fontWeight: 400,
+                        height: '36px',
+                        width: '100%',
+                        border:'1px solid black',
+                        borderRadius:'100px',
+                        paddingLeft: '44px'
+                      }}
+                    />
+                  </div>
+                </div>
               <div className="top-section-header">
+                
                 <h2 className="top-section-title">Facilities</h2>
-                <input
-                  type="text"
-                  className="section-search"
-                  placeholder="Quick search..."
-                  value={facilitiesSearch}
-                  onChange={e => setFacilitiesSearch(e.target.value)}
-                  style={{ marginLeft: 'auto', minWidth: 180, border: 'none', borderBottom: '2px solid #e0e0e0' }}
-                />
+             
               </div>
               {facilitiesMain.map(({ key, label }) => {
                 const filtered = data[key] || [];
-                return <Group key={key} title={label} items={filtered} checked={useCheckedState(key, filtered.length)} setChecked={getSetChecked(key, filtered.length)} />;
+                return <Group key={key} title={label} items={filtered} checked={useCheckedState(key, filtered.length)} setChecked={getSetChecked(key, filtered.length)} dataSource={dataSource} />;
               })}
               <div className="question-row">
                 <span>{facilitiesQuestion.text}</span>
